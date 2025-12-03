@@ -937,9 +937,12 @@
             border-radius: 20px;
             width: 90%;
             max-width: 500px;
+            max-height: 90vh;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             animation: slideUp 0.4s ease;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         @keyframes slideUp {
@@ -958,6 +961,7 @@
             color: white;
             padding: 2rem;
             text-align: center;
+            flex-shrink: 0;
         }
 
         .modal-header h2 {
@@ -972,8 +976,8 @@
 
         .modal-body {
             padding: 2rem;
-            max-height: calc(80vh - 180px);
             overflow-y: auto;
+            flex: 1 1 auto;
         }
 
         .form-group {
@@ -1194,6 +1198,17 @@
 
             .section-title {
                 font-size: 2rem;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 2% auto;
+                border-radius: 16px;
+            }
+
+            .modal-header,
+            .modal-body {
+                padding: 1.5rem;
             }
         }
     </style>
