@@ -1,0 +1,1586 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Gadget Profesional - Harga Pelajar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            overflow-x: hidden;
+            background: #0f0f1e;
+        }
+
+        .header {
+            background: rgba(15, 15, 30, 0.95);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            box-shadow: 0 4px 30px rgba(99, 102, 241, 0.1);
+            animation: slideInDown 0.6s ease-out;
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .logo-box {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .logo-box::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shine 3s ease-in-out infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        .logo-placeholder-text {
+            font-size: 0.65rem;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.2;
+            padding: 0.3rem;
+            z-index: 1;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+
+        .brand span {
+            font-size: 0.85rem;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            transition: width 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .cta-nav {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white !important;
+            padding: 0.7rem 1.8rem;
+            border-radius: 25px;
+            transition: all 0.3s;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .cta-nav::after {
+            display: none;
+        }
+
+        .cta-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.6);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 50%, #0f0f1e 100%);
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+            padding: 6rem 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+            bottom: -200px;
+            left: -200px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(99, 102, 241, 0.5);
+            border-radius: 50%;
+            animation: particleFloat 10s linear infinite;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text {
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .hero-text h2 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 1.1rem 2.8rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-primary:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(99, 102, 241, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1.1rem 2.8rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            transform: translateY(-3px);
+        }
+
+        .hero-visual {
+            animation: slideInRight 1s ease-out;
+        }
+
+        .floating-cards {
+            position: relative;
+            height: 400px;
+        }
+
+        .floating-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 1.5rem;
+            color: white;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .floating-card:nth-child(1) {
+            top: 0;
+            left: 0;
+            animation-delay: 0s;
+        }
+
+        .floating-card:nth-child(2) {
+            top: 50px;
+            right: 50px;
+            animation-delay: 1s;
+        }
+
+        .floating-card:nth-child(3) {
+            bottom: 0;
+            left: 100px;
+            animation-delay: 2s;
+        }
+
+        .floating-card-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .floating-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .floating-card p {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 3rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .section-label {
+            color: #6366f1;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-label::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: #1a1a1a;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.15rem;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .services-section {
+            background: linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-section::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+            top: 0;
+            right: -300px;
+            animation: spin 30s linear infinite;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid #e5e7eb;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(5) { animation-delay: 0.5s; }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            transition: left 0.4s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
+            border-color: #6366f1;
+        }
+
+        .service-card:hover::after {
+            left: 0;
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-list {
+            list-style: none;
+            margin-top: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-list li {
+            padding: 0.8rem 0;
+            color: #4b5563;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transform: translateX(0);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover .service-list li {
+            transform: translateX(10px);
+        }
+
+        .service-list li::before {
+            content: "✓";
+            color: #6366f1;
+            font-weight: bold;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .pricing-section {
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-section::before {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+            bottom: -400px;
+            left: -400px;
+            animation: pulse 10s ease-in-out infinite;
+        }
+
+        .pricing-section .section-title,
+        .pricing-section .section-subtitle {
+            color: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .price-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: all 0.4s;
+            position: relative;
+            color: white;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .price-card:nth-child(1) { animation-delay: 0.1s; }
+        .price-card:nth-child(2) { animation-delay: 0.2s; }
+        .price-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .price-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.3);
+            border-color: #6366f1;
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .price-card.featured {
+            border: 2px solid #6366f1;
+            background: rgba(99, 102, 241, 0.15);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
+            transform: scale(1.05);
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .price-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-note {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .price-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .price-features li {
+            padding: 0.7rem 0;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .price-features li::before {
+            content: "✓";
+            color: #6366f1;
+            font-weight: bold;
+        }
+
+        .features-section {
+            background: white;
+            position: relative;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 3rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .feature-item:nth-child(1) { animation-delay: 0.1s; }
+        .feature-item:nth-child(2) { animation-delay: 0.2s; }
+        .feature-item:nth-child(3) { animation-delay: 0.3s; }
+        .feature-item:nth-child(4) { animation-delay: 0.4s; }
+        .feature-item:nth-child(5) { animation-delay: 0.5s; }
+
+        .feature-icon-box {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.3);
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-icon-box::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
+            transform: translateX(-100%);
+            transition: 0.6s;
+        }
+
+        .feature-item:hover .feature-icon-box {
+            transform: translateY(-10px) rotate(5deg);
+            box-shadow: 0 30px 70px rgba(99, 102, 241, 0.4);
+        }
+
+        .feature-item:hover .feature-icon-box::before {
+            transform: translateX(100%);
+        }
+
+        .feature-item h3 {
+            font-size: 1.3rem;
+            color: #1a1a1a;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+        }
+
+        .feature-item p {
+            color: #6b7280;
+            line-height: 1.7;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+            transition: all 0.4s;
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .contact-card:nth-child(1) { animation-delay: 0.1s; }
+        .contact-card:nth-child(2) { animation-delay: 0.2s; }
+        .contact-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-icon-box {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .contact-card p {
+            font-size: 1.05rem;
+            opacity: 0.95;
+        }
+
+        .contact-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s;
+        }
+
+        .contact-card a:hover {
+            border-bottom-color: white;
+            letter-spacing: 1px;
+        }
+
+        footer {
+            background: #0a0a14;
+            color: #9ca3af;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #6366f1;
+            transform: translateY(-2px);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideUp 0.4s ease;
+            overflow: hidden;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .modal-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-header p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .modal-body {
+            padding: 2rem;
+            max-height: calc(80vh - 180px);
+            overflow-y: auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .optional-label {
+            color: #9ca3af;
+            font-size: 0.85rem;
+            font-weight: 400;
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+            transition: all 0.3s;
+        }
+
+        .close:hover {
+            transform: rotate(90deg);
+        }
+
+        .wa-float-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .wa-float-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+        }
+
+        .wa-float-btn svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        .maps-section {
+            background: white;
+        }
+
+        .maps-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .maps-info h3 {
+            font-size: 2rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .maps-info p {
+            color: #6b7280;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .maps-detail {
+            background: linear-gradient(135deg, #f9fafb, #ffffff);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #6366f1;
+            margin-bottom: 1.5rem;
+        }
+
+        .maps-detail strong {
+            color: #6366f1;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .maps-embed {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+            height: 450px;
+        }
+
+        .maps-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 1024px) {
+            .maps-container {
+                grid-template-columns: 1fr;
+            }
+
+            .maps-embed {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .floating-cards {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .hero {
+                padding: 4rem 1.5rem;
+            }
+
+            .hero-text h2 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .container {
+                padding: 4rem 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-box">
+                    <img src="elservice.png" alt="ELService" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                </div>
+                <div class="brand">
+                    <h1>ElService</h1>
+                    <span>Jasa Perbaikan Gadget Profesional</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#pricing">Harga</a></li>
+                    <li><a href="#features">Keunggulan</a></li>
+                    <li><a href="#contact" class="cta-nav">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="particles">
+            <div class="particle" style="left: 10%; animation-duration: 8s;"></div>
+            <div class="particle" style="left: 20%; animation-duration: 12s; animation-delay: 2s;"></div>
+            <div class="particle" style="left: 30%; animation-duration: 10s; animation-delay: 4s;"></div>
+            <div class="particle" style="left: 40%; animation-duration: 15s;"></div>
+            <div class="particle" style="left: 50%; animation-duration: 9s; animation-delay: 3s;"></div>
+            <div class="particle" style="left: 60%; animation-duration: 11s; animation-delay: 1s;"></div>
+            <div class="particle" style="left: 70%; animation-duration: 13s; animation-delay: 5s;"></div>
+            <div class="particle" style="left: 80%; animation-duration: 14s;"></div>
+            <div class="particle" style="left: 90%; animation-duration: 10s; animation-delay: 2s;"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h2>Service Gadget Profesional dengan Harga Pelajar</h2>
+                    <p>Solusi terpercaya untuk semua kerusakan smartphone, laptop, dan PC. Teknisi berpengalaman, harga terjangkau, hasil maksimal.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Konsultasi Gratis</button>
+                        <button class="btn-secondary" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">Lihat Harga</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-cards">
+                        <div class="floating-card">
+                            <div class="floating-card-icon">⚡</div>
+                            <h4>Pengerjaan Cepat</h4>
+                            <p>1-2 hari selesai</p>
+                        </div>
+                        <div class="floating-card">
+                            <div class="floating-card-icon">✅</div>
+                            <h4>Garansi Service</h4>
+                            <p>30 hari garansi</p>
+                        </div>
+                        <div class="floating-card">
+                            <div class="floating-card-icon">💰</div>
+                            <h4>Harga Terjangkau</h4>
+                            <p>Khusus pelajar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Layanan Kami</div>
+                <h2 class="section-title">Solusi Lengkap untuk Semua Gadget</h2>
+                <p class="section-subtitle">Dari kerusakan ringan hingga berat, kami tangani dengan professional dan cepat</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Service Android</h3>
+                    <ul class="service-list">
+                        <li>Ganti LCD & Touchscreen</li>
+                        <li>Perbaikan Mesin & IC Power</li>
+                        <li>Ganti Baterai Original</li>
+                        <li>Masalah Charging & Port USB</li>
+                        <li>Upgrade & Install ROM</li>
+                        <li>Perbaikan Speaker & Microphone</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🍎</div>
+                    <h3>Service iPhone</h3>
+                    <ul class="service-list">
+                        <li>Ganti LCD Original & Aftermarket</li>
+                        <li>Perbaikan Motherboard</li>
+                        <li>Battery Replacement Original</li>
+                        <li>Face ID & Touch ID Repair</li>
+                        <li>iOS Update & Troubleshooting</li>
+                        <li>Water Damage Recovery</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Service Desktop & Laptop</h3>
+                    <ul class="service-list">
+                        <li>Install Windows 10/11 Original</li>
+                        <li>Upgrade RAM & SSD</li>
+                        <li>Ganti Keyboard, LCD, Hinge</li>
+                        <li>Deep Cleaning & Thermal Paste</li>
+                        <li>Repair Charging Port</li>
+                        <li>Data Recovery & Backup</li>
+                        <li>Rakit PC Sesuai Budget</li>
+                        <li>Upgrade Hardware PC</li>
+                        <li>Setup Gaming & Rendering</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>On-Site Service</h3>
+                    <ul class="service-list">
+                        <li>Service ke Rumah/Kantor</li>
+                        <li>Khusus Area Haurgeulis</li>
+                        <li>Install & Setup di Lokasi</li>
+                        <li>Troubleshooting On-Site</li>
+                        <li>Konsultasi Langsung</li>
+                        <li>Gratis Konsultasi</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1)); border-radius: 15px; animation: fadeInUp 0.8s ease-out;">
+                <p style="color: #6366f1; font-weight: 600; font-size: 1.1rem;">🏠 Layanan On-Site Service tersedia untuk area Haurgeulis dan sekitarnya</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Harga Transparan</div>
+                <h2 class="section-title">Harga Khusus Pelajar & Mahasiswa</h2>
+                <p class="section-subtitle">Tidak ada biaya tersembunyi, gratis konsultasi dan diagnosa</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="price-card featured">
+                    <div class="featured-badge">Paling Populer</div>
+                    <h3>Smartphone</h3>
+                    <div class="price">50K</div>
+                    <p class="price-note">Mulai dari</p>
+                    <ul class="price-features">
+                        <li>Gratis Cek Kerusakan</li>
+                        <li>Gratis Konsultasi</li>
+                        <li>Garansi Service</li>
+                        <li>Spare Part Berkualitas</li>
+                    </ul>
+                </div>
+
+                <div class="price-card featured">
+                    <div class="featured-badge">Paling Populer</div>
+                    <h3>Laptop</h3>
+                    <div class="price">75K</div>
+                    <p class="price-note">Mulai dari</p>
+                    <ul class="price-features">
+                        <li>Install Windows Original</li>
+                        <li>Gratis Software Essentials</li>
+                        <li>Gratis Cleaning</li>
+                        <li>Garansi 30 Hari</li>
+                    </ul>
+                </div>
+
+                <div class="price-card">
+                    <h3>PC & Rakit</h3>
+                    <div class="price">50K</div>
+                    <p class="price-note">Mulai dari</p>
+                    <ul class="price-features">
+                        <li>Konsultasi Build PC</li>
+                        <li>Free Assembly</li>
+                        <li>Cable Management</li>
+                        <li>Setup & Optimasi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Mengapa Pilih Kami</div>
+                <h2 class="section-title">Komitmen Kualitas & Kepercayaan</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon-box">💰</div>
+                    <h3>Harga Pelajar</h3>
+                    <p>Harga special untuk pelajar dan mahasiswa tanpa mengurangi kualitas service</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">⚡</div>
+                    <h3>Pengerjaan Cepat</h3>
+                    <p>Mayoritas kerusakan selesai dalam 1-2 hari kerja, express service tersedia</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">✅</div>
+                    <h3>Garansi Resmi</h3>
+                    <p>Garansi service hingga 30 hari untuk semua pekerjaan yang kami lakukan</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">🔧</div>
+                    <h3>Teknisi Bersertifikat</h3>
+                    <p>Ditangani oleh teknisi berpengalaman dan terlatih dengan peralatan modern</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon-box">🏠</div>
+                    <h3>On-Site Service</h3>
+                    <p>Layanan service ke rumah atau kantor khusus untuk area Haurgeulis dan sekitarnya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label" style="color: rgba(255,255,255,0.9)">Hubungi Kami</div>
+                <h2 class="section-title" style="color: white">Konsultasi Gratis Sekarang</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9)">Tim kami siap membantu menyelesaikan masalah gadget Anda</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon-box">📱</div>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/6282215662010">0822-1566-2010</a></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Fast Response 24/7</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon-box">📍</div>
+                    <h3>Lokasi Kami</h3>
+                    <p>Jl. Siliwangi No.6, Haurgeulis, Kec. Haurgeulis, Kabupaten Indramayu, Jawa Barat 45264, Indonesia<br>Sebelah Alluna Laundry Express</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Masuk ke belakang</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon-box">🕐</div>
+                    <h3>Jam Operasional</h3>
+                    <p>Setiap Hari<br>09.00 - 20.00 WIB</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="maps-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Lokasi Kami</div>
+                <h2 class="section-title">Temukan Kami di Sini</h2>
+            </div>
+            <div class="maps-container">
+                <div class="maps-info">
+                    <h3>📍 Alamat Lengkap</h3>
+                    <p>Kami berlokasi strategis dan mudah dijangkau. Pastikan Anda menemukan lokasi yang tepat!</p>
+                    
+                    <div class="maps-detail">
+                        <strong>Alamat Lengkap:</strong>
+                        Jl. Siliwangi No.6, Haurgeulis, Kec. Haurgeulis, Kabupaten Indramayu, Jawa Barat 45264
+                    </div>
+
+                    <div class="maps-detail">
+                        <strong>Patokan:</strong>
+                        Sebelah kanan Alluna Laundry Express, kemudian masuk ke belakang
+                    </div>
+
+                    <div class="maps-detail" style="background: linear-gradient(135deg, #ecfdf5, #d1fae5); border-left-color: #10b981;">
+                        <strong style="color: #10b981;">🏠 On-Site Service:</strong>
+                        Kami melayani service ke rumah untuk area Haurgeulis dan sekitarnya. Hubungi kami untuk jadwal kunjungan!
+                    </div>
+
+                    <p style="margin-top: 1.5rem;">Jika ada kesulitan menemukan lokasi, jangan ragu untuk menghubungi kami via WhatsApp!</p>
+                </div>
+                <div class="maps-embed">
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1732936585627!6m8!1m7!1shmZRkBK9d1PjM9n4Pl_TjQ!2m2!1d-6.460257484435829!2d107.9447576061983!3f245.24510820574586!4f-7.773635357413269!5f0.7820865974627469" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TechRepair Professional Service. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Service Gadget Terpercaya dengan Harga Pelajar</p>
+        <div class="footer-links">
+            <a href="#services">Layanan</a>
+            <a href="#pricing">Harga</a>
+            <a href="#contact">Kontak</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="wa-float-btn" onclick="openModal()">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </div>
+
+    <!-- Modal Form -->
+    <div id="serviceModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>🛠️ Selamat Datang di ELService</h2>
+                <p>Silakan isi formulir di bawah untuk konsultasi gratis</p>
+            </div>
+            <div class="modal-body">
+                <form id="serviceForm">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap *</label>
+                        <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Alamat <span class="optional-label">(Opsional)</span></label>
+                        <input type="text" id="address" name="address" placeholder="Masukkan alamat Anda">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="deviceType">Tipe HP/Gadget *</label>
+                        <input type="text" id="deviceType" name="deviceType" required placeholder="Contoh: iPhone 12, Samsung A52, Asus Vivobook">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="issue">Kendala / Kerusakan *</label>
+                        <textarea id="issue" name="issue" required placeholder="Jelaskan kerusakan atau masalah yang dialami gadget Anda"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        💬 Kirim ke WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('serviceModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('serviceModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('serviceModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        document.getElementById('serviceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const deviceType = document.getElementById('deviceType').value;
+            const issue = document.getElementById('issue').value;
+            
+            let message = `Halo, saya ingin konsultasi service gadget:%0A%0A`;
+            message += `*Nama:* ${encodeURIComponent(name)}%0A`;
+            if (address) {
+                message += `*Alamat:* ${encodeURIComponent(address)}%0A`;
+            }
+            message += `*Tipe Gadget:* ${encodeURIComponent(deviceType)}%0A`;
+            message += `*Kendala:* ${encodeURIComponent(issue)}`;
+            
+            const whatsappURL = `https://wa.me/6282215662010?text=${message}`;
+            window.open(whatsappURL, '_blank');
+            
+            closeModal();
+            document.getElementById('serviceForm').reset();
+        });
+    </script>
+</body>
+</html>
