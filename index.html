@@ -876,9 +876,7 @@
         }
 
         .testimonials-section {
-            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 50%, #0f0f1e 100%);
-            background-size: 200% 200%;
-            animation: gradient 15s ease infinite;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
             position: relative;
             overflow: hidden;
         }
@@ -888,33 +886,10 @@
             position: absolute;
             width: 600px;
             height: 600px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-            top: -300px;
-            left: -300px;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .testimonials-section::after {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
-            bottom: -250px;
-            right: -250px;
-            animation: float 8s ease-in-out infinite reverse;
-        }
-
-        .testimonials-section .section-label {
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .testimonials-section .section-title {
-            color: white;
-        }
-
-        .testimonials-section .section-subtitle {
-            color: rgba(255, 255, 255, 0.8);
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+            bottom: -300px;
+            right: -300px;
+            animation: spin 30s linear infinite;
         }
 
         .testimonials-grid {
@@ -2086,7 +2061,6 @@
                     <li><a href="#services" onclick="closeMobileMenu()">Layanan</a></li>
                     <li><a href="#pricing" onclick="closeMobileMenu()">Harga</a></li>
                     <li><a href="#features" onclick="closeMobileMenu()">Keunggulan</a></li>
-                    <li><a href="#testimonials" onclick="closeMobileMenu()">Testimoni</a></li>
                     <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" onclick="event.preventDefault(); toggleDropdown(event);">
@@ -2136,7 +2110,7 @@
                     <p>Solusi terpercaya untuk semua kerusakan smartphone, laptop, dan PC. Teknisi berpengalaman, harga terjangkau, hasil maksimal.</p>
                     <div class="hero-buttons">
                         <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Konsultasi Gratis</button>
-                        <button class="btn-secondary" onclick="window.location.href='https://raysatyaa.github.io/daftar-harga/'">Lihat Harga</button>
+                        <button class="btn-secondary" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">Lihat Harga</button>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -2311,53 +2285,6 @@
                     <div class="feature-icon-box">🏠</div>
                     <h3>On-Site Service</h3>
                     <p>Layanan service ke rumah atau kantor khusus untuk area Haurgeulis dan sekitarnya</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Testimoni Pelanggan</div>
-                <h2 class="section-title">Apa Kata Pelanggan Kami</h2>
-                <p class="section-subtitle">Lihat pengalaman nyata dari pelanggan yang telah mempercayakan gadget mereka kepada kami</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-video-card">
-                    <div class="video-wrapper" onclick="toggleVideo(this)">
-                        <video preload="metadata" onclick="event.stopPropagation(); toggleVideo(this.closest('.video-wrapper'))">
-                            <source src="video/2.MOV" type="video/mp4">
-                            Browser Anda tidak mendukung video tag.
-                        </video>
-                        <div class="video-overlay">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-info">
-                        <h3>Testimoni Pelanggan 1</h3>
-                        <p>Pengalaman service yang memuaskan dari pelanggan kami</p>
-                    </div>
-                </div>
-
-                <div class="testimonial-video-card">
-                    <div class="video-wrapper" onclick="toggleVideo(this)">
-                        <video preload="metadata" onclick="event.stopPropagation(); toggleVideo(this.closest('.video-wrapper'))">
-                            <source src="video/1.MOV" type="video/mp4">
-                            Browser Anda tidak mendukung video tag.
-                        </video>
-                        <div class="video-overlay">
-                            <div class="play-button">
-                                <i class="fas fa-play"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-info">
-                        <h3>Testimoni Pelanggan 2</h3>
-                        <p>Kepuasan pelanggan adalah prioritas utama kami</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -2618,45 +2545,6 @@
             
             closeModal();
             document.getElementById('serviceForm').reset();
-        });
-
-        // Video Testimoni Functions
-        function toggleVideo(wrapper) {
-            const video = wrapper.querySelector('video');
-            const overlay = wrapper.querySelector('.video-overlay');
-            
-            if (video.paused) {
-                // Pause all other videos
-                document.querySelectorAll('.video-wrapper video').forEach(v => {
-                    if (v !== video) {
-                        v.pause();
-                        v.closest('.video-wrapper').classList.remove('playing');
-                    }
-                });
-                
-                video.play();
-                wrapper.classList.add('playing');
-                overlay.style.opacity = '0';
-            } else {
-                video.pause();
-                wrapper.classList.remove('playing');
-                overlay.style.opacity = '1';
-            }
-        }
-
-        // Pause video when clicking outside
-        document.querySelectorAll('.video-wrapper video').forEach(video => {
-            video.addEventListener('click', function(e) {
-                e.stopPropagation();
-                const wrapper = this.closest('.video-wrapper');
-                toggleVideo(wrapper);
-            });
-
-            video.addEventListener('ended', function() {
-                const wrapper = this.closest('.video-wrapper');
-                wrapper.classList.remove('playing');
-                wrapper.querySelector('.video-overlay').style.opacity = '1';
-            });
         });
     </script>
 </body>
