@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog ELService - Tips & Panduan Service Gadget | Perawatan HP, Laptop & PC</title>
+    <meta name="description" content="Blog ELService - Tips lengkap perawatan gadget, panduan service HP Android & iPhone, perbaikan laptop, dan artikel seputar teknologi. Update terbaru dari teknisi profesional.">
+    <meta name="keywords" content="blog service gadget, tips perawatan hp, cara service smartphone, panduan perbaikan laptop, tips baterai hp, service android, service iphone, haurgeulis, indramayu">
+    <meta name="author" content="ELService">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesian">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://raysatyaa.github.io/ElService/blog.html">
+    <meta property="og:title" content="Blog ELService - Tips & Panduan Service Gadget">
+    <meta property="og:description" content="Tips lengkap perawatan gadget, panduan service HP Android & iPhone, perbaikan laptop, dan artikel seputar teknologi.">
+    <meta property="og:image" content="https://raysatyaa.github.io/ElService/gambar/elservice.png">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="ELService Blog">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://raysatyaa.github.io/ElService/blog.html">
+    <meta name="twitter:title" content="Blog ELService - Tips & Panduan Service Gadget">
+    <meta name="twitter:description" content="Tips lengkap perawatan gadget, panduan service HP Android & iPhone, perbaikan laptop.">
+    <meta name="twitter:image" content="https://raysatyaa.github.io/ElService/gambar/elservice.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://raysatyaa.github.io/ElService/blog.html">
+    
+    <link rel="icon" type="image/png" href="gambar/elservice.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #f9fafb;
+        }
+
+        .header {
+            background: rgba(15, 15, 30, 0.95);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+            box-shadow: 0 4px 30px rgba(99, 102, 241, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+
+        .logo-box {
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+        }
+
+        .logo-box img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .brand h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -0.5px;
+        }
+
+        .brand span {
+            font-size: 0.85rem;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 600;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .cta-nav {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white !important;
+            padding: 0.7rem 1.8rem;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .cta-nav:hover {
+            transform: translateY(-2px);
+        }
+
+        .blog-hero {
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 100%);
+            padding: 4rem 3rem;
+            text-align: center;
+            color: white;
+        }
+
+        .blog-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .blog-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 3rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .blog-main {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.15);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+        }
+
+        .blog-card-content {
+            padding: 2rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+
+        .blog-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+
+        .blog-card h2 a {
+            color: #1a1a1a;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .blog-card h2 a:hover {
+            color: #6366f1;
+        }
+
+        .blog-card p {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-tag {
+            background: rgba(99, 102, 241, 0.1);
+            color: #6366f1;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #6366f1;
+            text-decoration: none;
+            font-weight: 600;
+            transition: gap 0.3s;
+        }
+
+        .read-more:hover {
+            gap: 1rem;
+        }
+
+        .blog-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-widget {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            font-weight: 700;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .popular-posts {
+            list-style: none;
+        }
+
+        .popular-posts li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .popular-posts li:last-child {
+            border-bottom: none;
+        }
+
+        .popular-posts a {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .popular-posts a:hover {
+            color: #6366f1;
+        }
+
+        .categories {
+            list-style: none;
+        }
+
+        .categories li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .categories li:last-child {
+            border-bottom: none;
+        }
+
+        .categories a {
+            color: #4b5563;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            transition: color 0.3s;
+        }
+
+        .categories a:hover {
+            color: #6366f1;
+        }
+
+        .categories span {
+            background: rgba(99, 102, 241, 0.1);
+            color: #6366f1;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .cta-box p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #6366f1;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: #0a0a14;
+            color: #9ca3af;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #6366f1;
+        }
+
+        .breadcrumb {
+            padding: 1rem 3rem;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .breadcrumb a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            color: #6b7280;
+        }
+
+        @media (max-width: 1024px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .nav-container {
+                padding: 1rem 1.5rem;
+                position: relative;
+            }
+
+            nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(15, 15, 30, 0.98);
+                backdrop-filter: blur(20px);
+                padding: 1rem;
+                display: none;
+                border-top: 1px solid rgba(99, 102, 241, 0.2);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 100%;
+            }
+
+            nav ul li {
+                width: 100%;
+            }
+
+            nav a {
+                display: block;
+                padding: 1rem;
+                border-radius: 10px;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            nav a:hover {
+                background: rgba(99, 102, 241, 0.1);
+            }
+
+            .cta-nav {
+                width: 100%;
+                text-align: center;
+            }
+
+            .blog-hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .blog-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .blog-hero p {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .blog-card-image {
+                height: 200px;
+                font-size: 3rem;
+            }
+
+            .blog-card-content {
+                padding: 1.5rem;
+            }
+
+            .blog-card h2 {
+                font-size: 1.4rem;
+            }
+
+            .blog-card p {
+                font-size: 0.95rem;
+            }
+
+            .blog-meta {
+                flex-wrap: wrap;
+                font-size: 0.85rem;
+            }
+
+            .sidebar-widget {
+                padding: 1.5rem;
+            }
+
+            .sidebar-widget h3 {
+                font-size: 1.3rem;
+            }
+
+            .cta-box {
+                padding: 1.5rem;
+            }
+
+            .cta-box h3 {
+                font-size: 1.3rem;
+            }
+
+            .breadcrumb {
+                padding: 1rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
+            .blog-card-content {
+                padding: 1.2rem;
+            }
+
+            .blog-card h2 {
+                font-size: 1.2rem;
+            }
+
+            .sidebar-widget {
+                padding: 1.2rem;
+            }
+
+            .logo-box {
+                width: 45px;
+                height: 45px;
+            }
+
+            .brand h1 {
+                font-size: 1.3rem;
+            }
+
+            .brand span {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "ELService Blog",
+      "description": "Tips lengkap perawatan gadget, panduan service HP Android & iPhone, perbaikan laptop, dan artikel seputar teknologi",
+      "url": "https://raysatyaa.github.io/ElService/blog.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ELService",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://raysatyaa.github.io/ElService/gambar/elservice.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://raysatyaa.github.io/ElService/blog.html"
+      }
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo-box">
+                    <img src="gambar/elservice.png" alt="ELService">
+                </div>
+                <div class="brand">
+                    <h1>ElService</h1>
+                    <span>Jasa Perbaikan Gadget Profesional</span>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mobileNav">
+                <ul>
+                    <li><a href="elservice.html" onclick="closeMobileMenu()">Beranda</a></li>
+                    <li><a href="elservice.html#services" onclick="closeMobileMenu()">Layanan</a></li>
+                    <li><a href="elservice.html#pricing" onclick="closeMobileMenu()">Harga</a></li>
+                    <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
+                    <li><a href="elservice.html#contact" class="cta-nav" onclick="closeMobileMenu()">Hubungi Kami</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <a href="elservice.html">Beranda</a> <span>/</span> <span>Blog</span>
+        </div>
+    </div>
+
+    <section class="blog-hero">
+        <h1>📚 Blog ELService</h1>
+        <p>Tips, Panduan, dan Informasi Terbaru Seputar Perawatan & Service Gadget</p>
+    </section>
+
+    <div class="container">
+        <div class="blog-grid">
+            <main class="blog-main">
+                <article class="blog-card">
+                    <div class="blog-card-image">🔋</div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 15 Januari 2024</span>
+                            <span><i class="far fa-user"></i> Tim ELService</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Tips Perawatan</span>
+                            <span class="blog-tag">Baterai</span>
+                        </div>
+                        <h2><a href="#baterai-tips">10 Tips Merawat Baterai Smartphone Agar Awet dan Tahan Lama</a></h2>
+                        <p>Baterai smartphone adalah komponen penting yang sering menjadi masalah utama. Pelajari cara merawat baterai HP Android dan iPhone agar tetap awet, tidak cepat drop, dan tahan lama. Tips dari teknisi profesional ELService...</p>
+                        <a href="#baterai-tips" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">📱</div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 12 Januari 2024</span>
+                            <span><i class="far fa-user"></i> Tim ELService</span>
+                            <span><i class="far fa-clock"></i> 7 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Service Android</span>
+                            <span class="blog-tag">Troubleshooting</span>
+                        </div>
+                        <h2><a href="#android-troubleshooting">Panduan Lengkap: Kapan Harus Service HP Android Anda?</a></h2>
+                        <p>Ketahui tanda-tanda kerusakan HP Android yang perlu segera diperbaiki. Mulai dari layar retak, baterai cepat habis, masalah charging, hingga performa yang lambat. Jangan tunggu sampai parah, segera bawa ke teknisi profesional...</p>
+                        <a href="#android-troubleshooting" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">🍎</div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 10 Januari 2024</span>
+                            <span><i class="far fa-user"></i> Tim ELService</span>
+                            <span><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">iPhone</span>
+                            <span class="blog-tag">Perawatan</span>
+                        </div>
+                        <h2><a href="#iphone-care">Cara Merawat iPhone Agar Tetap Seperti Baru - Tips dari Teknisi</a></h2>
+                        <p>iPhone adalah investasi yang mahal, jadi penting untuk merawatnya dengan baik. Pelajari cara membersihkan iPhone, melindungi layar, merawat baterai, dan tips lainnya agar iPhone Anda tetap awet dan performanya optimal...</p>
+                        <a href="#iphone-care" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">💻</div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 8 Januari 2024</span>
+                            <span><i class="far fa-user"></i> Tim ELService</span>
+                            <span><i class="far fa-clock"></i> 8 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Laptop</span>
+                            <span class="blog-tag">Maintenance</span>
+                        </div>
+                        <h2><a href="#laptop-maintenance">Panduan Maintenance Laptop: Cleaning, Thermal Paste, dan Optimasi</a></h2>
+                        <p>Laptop yang jarang dibersihkan akan mengalami overheat, performa menurun, dan umur lebih pendek. Pelajari kapan harus melakukan deep cleaning, ganti thermal paste, upgrade RAM/SSD, dan tips optimasi performa laptop...</p>
+                        <a href="#laptop-maintenance" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">🛡️</div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 5 Januari 2024</span>
+                            <span><i class="far fa-user"></i> Tim ELService</span>
+                            <span><i class="far fa-clock"></i> 6 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Tips</span>
+                            <span class="blog-tag">Protection</span>
+                        </div>
+                        <h2><a href="#gadget-protection">Cara Melindungi Gadget dari Kerusakan: Case, Screen Protector, dan Tips Lainnya</a></h2>
+                        <p>Mencegah lebih baik daripada memperbaiki. Pelajari cara melindungi smartphone dan laptop dari kerusakan fisik, air, debu, dan faktor lainnya. Tips memilih case, screen protector, dan aksesoris pelindung yang tepat...</p>
+                        <a href="#gadget-protection" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image">⚡</div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="far fa-calendar"></i> 3 Januari 2024</span>
+                            <span><i class="far fa-user"></i> Tim ELService</span>
+                            <span><i class="far fa-clock"></i> 5 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Charging</span>
+                            <span class="blog-tag">Tips</span>
+                        </div>
+                        <h2><a href="#charging-tips">Kesalahan Charging yang Merusak Baterai HP - Hindari Ini!</a></h2>
+                        <p>Banyak orang melakukan kesalahan saat charging smartphone yang justru merusak baterai. Pelajari kebiasaan charging yang salah dan cara yang benar untuk menjaga kesehatan baterai HP Anda agar tetap awet...</p>
+                        <a href="#charging-tips" class="read-more">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </main>
+
+            <aside class="blog-sidebar">
+                <div class="sidebar-widget">
+                    <h3>📞 Butuh Bantuan?</h3>
+                    <div class="cta-box">
+                        <h3>Service Gadget Profesional</h3>
+                        <p>Konsultasi gratis untuk masalah gadget Anda. Teknisi berpengalaman, harga pelajar!</p>
+                        <a href="elservice.html#contact" class="cta-button">Hubungi Kami</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>🔥 Artikel Populer</h3>
+                    <ul class="popular-posts">
+                        <li><a href="#baterai-tips">10 Tips Merawat Baterai Smartphone</a></li>
+                        <li><a href="#android-troubleshooting">Kapan Harus Service HP Android?</a></li>
+                        <li><a href="#iphone-care">Cara Merawat iPhone Agar Awet</a></li>
+                        <li><a href="#laptop-maintenance">Panduan Maintenance Laptop</a></li>
+                        <li><a href="#charging-tips">Kesalahan Charging yang Merusak Baterai</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>📂 Kategori</h3>
+                    <ul class="categories">
+                        <li><a href="#tips-perawatan">Tips Perawatan <span>8</span></a></li>
+                        <li><a href="#service-android">Service Android <span>5</span></a></li>
+                        <li><a href="#service-iphone">Service iPhone <span>4</span></a></li>
+                        <li><a href="#service-laptop">Service Laptop <span>6</span></a></li>
+                        <li><a href="#troubleshooting">Troubleshooting <span>7</span></a></li>
+                        <li><a href="#spare-part">Spare Part <span>3</span></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>📍 Lokasi Kami</h3>
+                    <p style="color: #4b5563; margin-bottom: 1rem;">Jl. Siliwangi No.6, Haurgeulis, Indramayu</p>
+                    <p style="color: #4b5563; margin-bottom: 1rem;">Sebelah Alluna Laundry Express</p>
+                    <a href="elservice.html#contact" style="color: #6366f1; text-decoration: none; font-weight: 600;">Lihat Peta →</a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 ELService - TechRepair Professional Service. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Service Gadget Terpercaya dengan Harga Pelajar</p>
+        <div class="footer-links">
+            <a href="elservice.html">Beranda</a>
+            <a href="elservice.html#services">Layanan</a>
+            <a href="elservice.html#pricing">Harga</a>
+            <a href="blog.html">Blog</a>
+            <a href="elservice.html#contact">Kontak</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const nav = document.getElementById('mobileNav');
+            nav.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const nav = document.getElementById('mobileNav');
+            nav.classList.remove('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.getElementById('mobileNav');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            if (nav && toggle && !nav.contains(event.target) && !toggle.contains(event.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
+
