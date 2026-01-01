@@ -875,6 +875,154 @@
             position: relative;
         }
 
+        .testimonials-section {
+            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 50%, #0f0f1e 100%);
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-section::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            top: -300px;
+            left: -300px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .testimonials-section::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+            bottom: -250px;
+            right: -250px;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        .testimonials-section .section-label {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .testimonials-section .section-title {
+            color: white;
+        }
+
+        .testimonials-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-video-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: fadeInUp 0.6s ease-out backwards;
+            position: relative;
+        }
+
+        .testimonial-video-card:nth-child(1) { animation-delay: 0.1s; }
+        .testimonial-video-card:nth-child(2) { animation-delay: 0.2s; }
+
+        .testimonial-video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: #000;
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 2;
+        }
+
+        .video-overlay:hover {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #6366f1;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .play-button:hover {
+            transform: scale(1.1);
+            background: white;
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
+        }
+
+        .video-wrapper.playing .video-overlay {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .testimonial-info {
+            padding: 2rem;
+        }
+
+        .testimonial-info h3 {
+            font-size: 1.3rem;
+            color: #1a1a1a;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .testimonial-info p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1637,6 +1785,25 @@
                 font-size: 1.2rem;
             }
 
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .testimonial-info {
+                padding: 1.5rem;
+            }
+
+            .testimonial-info h3 {
+                font-size: 1.2rem;
+            }
+
+            .play-button {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
@@ -1798,6 +1965,21 @@
                 padding: 1.5rem 1rem;
             }
 
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .testimonial-info {
+                padding: 1.2rem;
+            }
+
+            .play-button {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
             .modal-content {
                 width: 98%;
                 margin: 2% auto;
@@ -1904,6 +2086,7 @@
                     <li><a href="#services" onclick="closeMobileMenu()">Layanan</a></li>
                     <li><a href="#pricing" onclick="closeMobileMenu()">Harga</a></li>
                     <li><a href="#features" onclick="closeMobileMenu()">Keunggulan</a></li>
+                    <li><a href="#testimonials" onclick="closeMobileMenu()">Testimoni</a></li>
                     <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" onclick="event.preventDefault(); toggleDropdown(event);">
@@ -1953,7 +2136,7 @@
                     <p>Solusi terpercaya untuk semua kerusakan smartphone, laptop, dan PC. Teknisi berpengalaman, harga terjangkau, hasil maksimal.</p>
                     <div class="hero-buttons">
                         <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Konsultasi Gratis</button>
-                        <button class="btn-secondary" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">Lihat Harga</button>
+                        <button class="btn-secondary" onclick="window.location.href='https://raysatyaa.github.io/daftar-harga/'">Lihat Harga</button>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -2128,6 +2311,53 @@
                     <div class="feature-icon-box">🏠</div>
                     <h3>On-Site Service</h3>
                     <p>Layanan service ke rumah atau kantor khusus untuk area Haurgeulis dan sekitarnya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Testimoni Pelanggan</div>
+                <h2 class="section-title">Apa Kata Pelanggan Kami</h2>
+                <p class="section-subtitle">Lihat pengalaman nyata dari pelanggan yang telah mempercayakan gadget mereka kepada kami</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-video-card">
+                    <div class="video-wrapper" onclick="toggleVideo(this)">
+                        <video preload="metadata" onclick="event.stopPropagation(); toggleVideo(this.closest('.video-wrapper'))">
+                            <source src="video/2.MOV" type="video/mp4">
+                            Browser Anda tidak mendukung video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-info">
+                        <h3>Testimoni Pelanggan 1</h3>
+                        <p>Pengalaman service yang memuaskan dari pelanggan kami</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-video-card">
+                    <div class="video-wrapper" onclick="toggleVideo(this)">
+                        <video preload="metadata" onclick="event.stopPropagation(); toggleVideo(this.closest('.video-wrapper'))">
+                            <source src="video/1.MOV" type="video/mp4">
+                            Browser Anda tidak mendukung video tag.
+                        </video>
+                        <div class="video-overlay">
+                            <div class="play-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-info">
+                        <h3>Testimoni Pelanggan 2</h3>
+                        <p>Kepuasan pelanggan adalah prioritas utama kami</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2388,6 +2618,45 @@
             
             closeModal();
             document.getElementById('serviceForm').reset();
+        });
+
+        // Video Testimoni Functions
+        function toggleVideo(wrapper) {
+            const video = wrapper.querySelector('video');
+            const overlay = wrapper.querySelector('.video-overlay');
+            
+            if (video.paused) {
+                // Pause all other videos
+                document.querySelectorAll('.video-wrapper video').forEach(v => {
+                    if (v !== video) {
+                        v.pause();
+                        v.closest('.video-wrapper').classList.remove('playing');
+                    }
+                });
+                
+                video.play();
+                wrapper.classList.add('playing');
+                overlay.style.opacity = '0';
+            } else {
+                video.pause();
+                wrapper.classList.remove('playing');
+                overlay.style.opacity = '1';
+            }
+        }
+
+        // Pause video when clicking outside
+        document.querySelectorAll('.video-wrapper video').forEach(video => {
+            video.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const wrapper = this.closest('.video-wrapper');
+                toggleVideo(wrapper);
+            });
+
+            video.addEventListener('ended', function() {
+                const wrapper = this.closest('.video-wrapper');
+                wrapper.classList.remove('playing');
+                wrapper.querySelector('.video-overlay').style.opacity = '1';
+            });
         });
     </script>
 </body>
