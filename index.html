@@ -1,2552 +1,1923 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Gadget Profesional - Harga Pelajar | ELService</title>
-    <meta name="description" content="ELService - Jasa perbaikan gadget profesional dengan harga pelajar. Service Android, iPhone, Laptop, dan PC. Teknisi berpengalaman, garansi resmi 30 hari. Lokasi: Haurgeulis, Indramayu.">
-    <meta name="keywords" content="service gadget, service hp, service android, service iphone, service laptop, service pc, perbaikan hp, perbaikan gadget, haurgeulis, indramayu, harga pelajar, service murah">
-    <meta name="author" content="ELService">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="Indonesian">
-    <meta name="revisit-after" content="7 days">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://raysatyaa.github.io/ElService/">
-    <meta property="og:title" content="Service Gadget Profesional - Harga Pelajar | ELService">
-    <meta property="og:description" content="ELService - Jasa perbaikan gadget profesional dengan harga pelajar. Service Android, iPhone, Laptop, dan PC. Teknisi berpengalaman, garansi resmi 30 hari.">
-    <meta property="og:image" content="https://raysatyaa.github.io/ElService/gambar/elservice.png">
-    <meta property="og:locale" content="id_ID">
-    <meta property="og:site_name" content="ELService">
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://raysatyaa.github.io/ElService/">
-    <meta name="twitter:title" content="Service Gadget Profesional - Harga Pelajar | ELService">
-    <meta name="twitter:description" content="ELService - Jasa perbaikan gadget profesional dengan harga pelajar. Service Android, iPhone, Laptop, dan PC.">
-    <meta name="twitter:image" content="https://raysatyaa.github.io/ElService/gambar/elservice.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://raysatyaa.github.io/ElService/">
-    
-    <link rel="icon" type="image/png" href="gambar/elservice.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            line-height: 1.6;
-            color: #1a1a1a;
-            overflow-x: hidden;
-            background: #0f0f1e;
-        }
-
-        .header {
-            background: rgba(15, 15, 30, 0.95);
-            backdrop-filter: blur(20px);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(99, 102, 241, 0.2);
-            box-shadow: 0 4px 30px rgba(99, 102, 241, 0.1);
-            animation: slideInDown 0.6s ease-out;
-        }
-
-        @keyframes slideInDown {
-            from {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.2rem 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-            animation: slideInLeft 0.8s ease-out;
-        }
-
-        .logo-box {
-            width: 55px;
-            height: 55px;
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
-            position: relative;
-            overflow: hidden;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .logo-box::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
-            animation: shine 3s ease-in-out infinite;
-        }
-
-        @keyframes shine {
-            0% { transform: translateX(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) rotate(45deg); }
-        }
-
-        .logo-placeholder-text {
-            font-size: 0.65rem;
-            color: white;
-            font-weight: 700;
-            text-align: center;
-            line-height: 1.2;
-            padding: 0.3rem;
-            z-index: 1;
-        }
-
-        .brand {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand h1 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
-            letter-spacing: -0.5px;
-        }
-
-        .brand span {
-            font-size: 0.85rem;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 600;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .mobile-menu-toggle {
-            display: none;
-            background: transparent;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-
-        nav a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s;
-            position: relative;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6);
-            transition: width 0.3s;
-        }
-
-        nav a:hover {
-            color: white;
-        }
-
-        nav a:hover::after {
-            width: 100%;
-        }
-
-        /* Dropdown Menu Styles */
-        .dropdown {
-            position: relative;
-        }
-
-        .dropdown-toggle {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            cursor: pointer;
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s;
-        }
-
-        .dropdown-toggle:hover {
-            color: white;
-        }
-
-        .dropdown-toggle i {
-            font-size: 0.8rem;
-            transition: transform 0.3s;
-        }
-
-        .dropdown.active .dropdown-toggle i {
-            transform: rotate(180deg);
-        }
-
-        .dropdown-menu {
-            position: absolute;
-            top: calc(100% + 10px);
-            left: 0;
-            background: rgba(15, 15, 30, 0.98);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 15px;
-            min-width: 250px;
-            padding: 0.5rem;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-        }
-
-        .dropdown.active .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        .dropdown-menu a {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            padding: 0.8rem 1rem;
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            border-radius: 10px;
-            transition: all 0.3s;
-            font-size: 0.9rem;
-        }
-
-        .dropdown-menu a::after {
-            display: none;
-        }
-
-        .dropdown-menu a:hover {
-            background: rgba(99, 102, 241, 0.1);
-            color: white;
-            transform: translateX(5px);
-        }
-
-        .dropdown-menu a i {
-            width: 20px;
-            text-align: center;
-            font-size: 1rem;
-        }
-
-        .dropdown-menu a .fa-instagram {
-            background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .dropdown-menu a .fa-handshake {
-            color: #25D366;
-        }
-
-        .dropdown-menu a .fa-dollar-sign {
-            color: #6366f1;
-        }
-
-        .dropdown-menu a .fa-map-marker-alt {
-            color: #f59e0b;
-        }
-
-        .cta-nav {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: white !important;
-            padding: 0.7rem 1.8rem;
-            border-radius: 25px;
-            transition: all 0.3s;
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
-        }
-
-        .cta-nav::after {
-            display: none;
-        }
-
-        .cta-nav:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.6);
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 50%, #0f0f1e 100%);
-            background-size: 200% 200%;
-            animation: gradient 15s ease infinite;
-            padding: 6rem 3rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-            top: -250px;
-            right: -250px;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
-            bottom: -200px;
-            left: -200px;
-            animation: float 8s ease-in-out infinite reverse;
-        }
-
-        .particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(99, 102, 241, 0.5);
-            border-radius: 50%;
-            animation: particleFloat 10s linear infinite;
-        }
-
-        @keyframes particleFloat {
-            0% {
-                transform: translateY(100vh) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) translateX(100px);
-                opacity: 0;
-            }
-        }
-
-        .hero-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-text {
-            animation: slideInLeft 1s ease-out;
-        }
-
-        .hero-text h2 {
-            font-size: 3.5rem;
-            color: white;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -1px;
-            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-text p {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 2.5rem;
-            line-height: 1.7;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: white;
-            padding: 1.1rem 2.8rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .btn-primary::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .btn-primary:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 50px rgba(99, 102, 241, 0.6);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 1.1rem 2.8rem;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: white;
-            transform: translateY(-3px);
-        }
-
-        .hero-visual {
-            animation: slideInRight 1s ease-out;
-        }
-
-        .floating-cards {
-            position: relative;
-            height: 400px;
-        }
-
-        .floating-card {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 1.5rem;
-            color: white;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: float 4s ease-in-out infinite;
-        }
-
-        .floating-card:nth-child(1) {
-            top: 0;
-            left: 0;
-            animation-delay: 0s;
-        }
-
-        .floating-card:nth-child(2) {
-            top: 50px;
-            right: 50px;
-            animation-delay: 1s;
-        }
-
-        .floating-card:nth-child(3) {
-            bottom: 0;
-            left: 100px;
-            animation-delay: 2s;
-        }
-
-        .floating-card-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .floating-card h4 {
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .floating-card p {
-            font-size: 0.85rem;
-            opacity: 0.8;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 6rem 3rem;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .section-label {
-            color: #6366f1;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.85rem;
-            margin-bottom: 1rem;
-            display: inline-block;
-            position: relative;
-        }
-
-        .section-label::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6);
-        }
-
-        .section-title {
-            font-size: 2.8rem;
-            color: #1a1a1a;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            letter-spacing: -1px;
-        }
-
-        .section-subtitle {
-            font-size: 1.15rem;
-            color: #6b7280;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .services-section {
-            background: linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .services-section::before {
-            content: '';
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
-            top: 0;
-            right: -300px;
-            animation: spin 30s linear infinite;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid #e5e7eb;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.6s ease-out backwards;
-        }
-
-        .service-card:nth-child(1) { animation-delay: 0.1s; }
-        .service-card:nth-child(2) { animation-delay: 0.2s; }
-        .service-card:nth-child(3) { animation-delay: 0.3s; }
-        .service-card:nth-child(4) { animation-delay: 0.4s; }
-        .service-card:nth-child(5) { animation-delay: 0.5s; }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        .service-card:hover::before {
-            opacity: 1;
-        }
-
-        .service-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6);
-            transition: left 0.4s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
-            border-color: #6366f1;
-        }
-
-        .service-card:hover::after {
-            left: 0;
-        }
-
-        .service-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            color: #1a1a1a;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-list {
-            list-style: none;
-            margin-top: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .service-list li {
-            padding: 0.8rem 0;
-            color: #4b5563;
-            font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            transform: translateX(0);
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover .service-list li {
-            transform: translateX(10px);
-        }
-
-        .service-list li::before {
-            content: "✓";
-            color: #6366f1;
-            font-weight: bold;
-            font-size: 1.1rem;
-            flex-shrink: 0;
-        }
-
-        .pricing-section {
-            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .pricing-section::before {
-            content: '';
-            position: absolute;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
-            bottom: -400px;
-            left: -400px;
-            animation: pulse 10s ease-in-out infinite;
-        }
-
-        .pricing-section .section-title,
-        .pricing-section .section-subtitle {
-            color: white;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .price-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            padding: 3rem 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            transition: all 0.4s;
-            position: relative;
-            color: white;
-            animation: fadeInUp 0.6s ease-out backwards;
-        }
-
-        .price-card:nth-child(1) { animation-delay: 0.1s; }
-        .price-card:nth-child(2) { animation-delay: 0.2s; }
-        .price-card:nth-child(3) { animation-delay: 0.3s; }
-
-        .price-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.3);
-            border-color: #6366f1;
-            background: rgba(99, 102, 241, 0.1);
-        }
-
-        .price-card.featured {
-            border: 2px solid #6366f1;
-            background: rgba(99, 102, 241, 0.15);
-            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3);
-            transform: scale(1.05);
-        }
-
-        .featured-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: white;
-            padding: 0.5rem 1.5rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .price-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .price {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-        }
-
-        .price-note {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-        }
-
-        .price-features {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 2rem;
-        }
-
-        .price-features li {
-            padding: 0.7rem 0;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 0.9rem;
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-        }
-
-        .price-features li::before {
-            content: "✓";
-            color: #6366f1;
-            font-weight: bold;
-        }
-
-        .features-section {
-            background: white;
-            position: relative;
-        }
-
-        .testimonials-section {
-            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .testimonials-section::before {
-            content: '';
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
-            bottom: -300px;
-            right: -300px;
-            animation: spin 30s linear infinite;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-video-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            animation: fadeInUp 0.6s ease-out backwards;
-            position: relative;
-        }
-
-        .testimonial-video-card:nth-child(1) { animation-delay: 0.1s; }
-        .testimonial-video-card:nth-child(2) { animation-delay: 0.2s; }
-
-        .testimonial-video-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(99, 102, 241, 0.2);
-        }
-
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            background: #000;
-            overflow: hidden;
-        }
-
-        .video-wrapper video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            cursor: pointer;
-        }
-
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            z-index: 2;
-        }
-
-        .video-overlay:hover {
-            background: rgba(0, 0, 0, 0.2);
-        }
-
-        .play-button {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: #6366f1;
-            transition: all 0.3s;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        .play-button:hover {
-            transform: scale(1.1);
-            background: white;
-            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4);
-        }
-
-        .video-wrapper.playing .video-overlay {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .testimonial-info {
-            padding: 2rem;
-        }
-
-        .testimonial-info h3 {
-            font-size: 1.3rem;
-            color: #1a1a1a;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        .testimonial-info p {
-            color: #6b7280;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 3rem;
-        }
-
-        .feature-item {
-            text-align: center;
-            animation: fadeInUp 0.6s ease-out backwards;
-        }
-
-        .feature-item:nth-child(1) { animation-delay: 0.1s; }
-        .feature-item:nth-child(2) { animation-delay: 0.2s; }
-        .feature-item:nth-child(3) { animation-delay: 0.3s; }
-        .feature-item:nth-child(4) { animation-delay: 0.4s; }
-        .feature-item:nth-child(5) { animation-delay: 0.5s; }
-
-        .feature-icon-box {
-            width: 90px;
-            height: 90px;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2.5rem;
-            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.3);
-            transition: all 0.4s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-icon-box::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
-            transform: translateX(-100%);
-            transition: 0.6s;
-        }
-
-        .feature-item:hover .feature-icon-box {
-            transform: translateY(-10px) rotate(5deg);
-            box-shadow: 0 30px 70px rgba(99, 102, 241, 0.4);
-        }
-
-        .feature-item:hover .feature-icon-box::before {
-            transform: translateX(100%);
-        }
-
-        .feature-item h3 {
-            font-size: 1.3rem;
-            color: #1a1a1a;
-            margin-bottom: 0.8rem;
-            font-weight: 700;
-        }
-
-        .feature-item p {
-            color: #6b7280;
-            line-height: 1.7;
-        }
-
-        .contact-section {
-            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
-            bottom: -400px;
-            left: -400px;
-            animation: pulse 10s ease-in-out infinite;
-        }
-
-        .contact-section .section-title,
-        .contact-section .section-subtitle {
-            color: white;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: center;
-            transition: all 0.4s;
-            animation: fadeInUp 0.6s ease-out backwards;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-card:nth-child(1) { animation-delay: 0.1s; }
-        .contact-card:nth-child(2) { animation-delay: 0.2s; }
-        .contact-card:nth-child(3) { animation-delay: 0.3s; }
-
-        .contact-card:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.3);
-            border-color: #6366f1;
-            background: rgba(99, 102, 241, 0.1);
-        }
-
-        .contact-icon-box {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .contact-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            color: white;
-        }
-
-        .contact-card p {
-            font-size: 1.05rem;
-            opacity: 0.95;
-            color: white;
-        }
-
-        .contact-card a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-            transition: all 0.3s;
-        }
-
-        .contact-card a:hover {
-            border-bottom-color: white;
-            letter-spacing: 1px;
-        }
-
-        /* Quick Links Section */
-        .quick-links-section {
-            background: linear-gradient(135deg, #0f0f1e 0%, #1a1a3e 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .quick-links-section::before {
-            content: '';
-            position: absolute;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
-            bottom: -400px;
-            left: -400px;
-            animation: pulse 10s ease-in-out infinite;
-        }
-
-        .quick-links-section .section-title,
-        .quick-links-section .section-subtitle {
-            color: white;
-        }
-
-        .quick-links-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .quick-link-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            padding: 2rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            text-decoration: none;
-            color: white;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            animation: fadeInUp 0.6s ease-out backwards;
-        }
-
-        .quick-link-card:nth-child(1) { animation-delay: 0.1s; }
-        .quick-link-card:nth-child(2) { animation-delay: 0.2s; }
-        .quick-link-card:nth-child(3) { animation-delay: 0.3s; }
-        .quick-link-card:nth-child(4) { animation-delay: 0.4s; }
-
-        .quick-link-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.6s;
-        }
-
-        .quick-link-card:hover::before {
-            left: 100%;
-        }
-
-        .quick-link-card:hover {
-            transform: translateY(-8px) scale(1.05);
-            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.3);
-            border-color: #6366f1;
-            background: rgba(99, 102, 241, 0.1);
-        }
-
-        .quick-link-icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: white;
-            flex-shrink: 0;
-            transition: all 0.4s;
-        }
-
-        .quick-link-card:hover .quick-link-icon {
-            transform: rotate(10deg) scale(1.1);
-        }
-
-        .instagram-icon {
-            background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            box-shadow: 0 10px 30px rgba(225, 48, 108, 0.4);
-        }
-
-        .partnership-icon {
-            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-        }
-
-        .price-icon {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
-        }
-
-        .location-icon {
-            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
-        }
-
-        .quick-link-content {
-            flex: 1;
-        }
-
-        .quick-link-content h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-
-        .quick-link-content p {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.5;
-        }
-
-        .quick-link-arrow {
-            font-size: 1.5rem;
-            color: rgba(255, 255, 255, 0.5);
-            transition: all 0.4s;
-            flex-shrink: 0;
-        }
-
-        .quick-link-card:hover .quick-link-arrow {
-            transform: translateX(10px);
-            color: white;
-        }
-
-        footer {
-            background: #0a0a14;
-            color: #9ca3af;
-            padding: 3rem;
-            text-align: center;
-        }
-
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: #9ca3af;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #6366f1;
-            transform: translateY(-2px);
-        }
-
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(10px);
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
-            margin: 5% auto;
-            padding: 0;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 500px;
-            max-height: 90vh;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: slideUp 0.4s ease;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        @keyframes slideUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        .modal-header h2 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .modal-header p {
-            opacity: 0.9;
-            font-size: 0.95rem;
-        }
-
-        .modal-body {
-            padding: 2rem;
-            overflow-y: auto;
-            flex: 1 1 auto;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #1a1a1a;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.9rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            transition: all 0.3s;
-            font-family: inherit;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #6366f1;
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .optional-label {
-            color: #9ca3af;
-            font-size: 0.85rem;
-            font-weight: 400;
-        }
-
-        .submit-btn {
-            width: 100%;
-            background: linear-gradient(135deg, #6366f1, #8b5cf6);
-            color: white;
-            padding: 1rem;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.05rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s;
-            margin-top: 1rem;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
-        }
-
-        .close {
-            color: white;
-            float: right;
-            font-size: 2rem;
-            font-weight: bold;
-            cursor: pointer;
-            line-height: 1;
-            transition: all 0.3s;
-        }
-
-        .close:hover {
-            transform: rotate(90deg);
-        }
-
-        .wa-float-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 65px;
-            height: 65px;
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-            cursor: pointer;
-            z-index: 1000;
-            transition: all 0.3s;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .wa-float-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
-        }
-
-        .wa-float-btn svg {
-            width: 35px;
-            height: 35px;
-            fill: white;
-        }
-
-        .maps-section {
-            background: white;
-        }
-
-        .maps-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .maps-info h3 {
-            font-size: 2rem;
-            color: #1a1a1a;
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-
-        .maps-info p {
-            color: #6b7280;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
-        }
-
-        .maps-detail {
-            background: linear-gradient(135deg, #f9fafb, #ffffff);
-            padding: 1.5rem;
-            border-radius: 15px;
-            border-left: 4px solid #6366f1;
-            margin-bottom: 1.5rem;
-        }
-
-        .maps-detail strong {
-            color: #6366f1;
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .maps-embed {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-            height: 450px;
-        }
-
-        .maps-embed iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        @media (max-width: 1024px) {
-            .maps-container {
-                grid-template-columns: 1fr;
-            }
-
-            .maps-embed {
-                height: 350px;
-            }
-        }
-
-        @media (max-width: 1024px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-text h2 {
-                font-size: 2.5rem;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .floating-cards {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-toggle {
-                display: block;
-            }
-
-            .nav-container {
-                padding: 1rem 1.5rem;
-                position: relative;
-            }
-
-            nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(15, 15, 30, 0.98);
-                backdrop-filter: blur(20px);
-                padding: 1rem;
-                display: none;
-                border-top: 1px solid rgba(99, 102, 241, 0.2);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            }
-
-            nav.active {
-                display: block;
-            }
-
-            nav ul {
-                flex-direction: column;
-                gap: 0.5rem;
-                width: 100%;
-            }
-
-            nav ul li {
-                width: 100%;
-            }
-
-            nav a {
-                display: block;
-                padding: 1rem;
-                border-radius: 10px;
-                text-align: center;
-                font-size: 1rem;
-            }
-
-            nav a:hover {
-                background: rgba(99, 102, 241, 0.1);
-            }
-
-            .dropdown {
-                width: 100%;
-            }
-
-            .dropdown-toggle {
-                width: 100%;
-                justify-content: center;
-                padding: 1rem;
-                border-radius: 10px;
-            }
-
-            .dropdown-menu {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                margin-top: 0.5rem;
-                width: 100%;
-                min-width: auto;
-                box-shadow: none;
-                border: none;
-                background: rgba(99, 102, 241, 0.05);
-            }
-
-            .dropdown-menu a {
-                padding: 0.8rem 1rem;
-            }
-
-            .cta-nav {
-                width: 100%;
-                text-align: center;
-            }
-
-            .hero {
-                padding: 3rem 1.5rem 2rem;
-            }
-
-            .hero-text h2 {
-                font-size: 1.75rem;
-                line-height: 1.3;
-                margin-bottom: 1rem;
-            }
-
-            .hero-text p {
-                font-size: 1rem;
-                margin-bottom: 2rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                gap: 1rem;
-                width: 100%;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                width: 100%;
-                padding: 1rem 2rem;
-                font-size: 1rem;
-            }
-
-            .container {
-                padding: 3rem 1.5rem;
-            }
-
-            .section-header {
-                margin-bottom: 2.5rem;
-            }
-
-            .section-title {
-                font-size: 1.75rem;
-                line-height: 1.3;
-            }
-
-            .section-subtitle {
-                font-size: 1rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .service-card {
-                padding: 1.5rem;
-            }
-
-            .service-icon {
-                font-size: 2.5rem;
-                margin-bottom: 1rem;
-            }
-
-            .service-card h3 {
-                font-size: 1.3rem;
-            }
-
-            .service-list li {
-                font-size: 0.9rem;
-                padding: 0.6rem 0;
-            }
-
-            .pricing-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .price-card {
-                padding: 2rem 1.5rem;
-            }
-
-            .price-card.featured {
-                transform: scale(1);
-            }
-
-            .price {
-                font-size: 2.5rem;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .feature-icon-box {
-                width: 70px;
-                height: 70px;
-                font-size: 2rem;
-            }
-
-            .feature-item h3 {
-                font-size: 1.2rem;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .testimonial-info {
-                padding: 1.5rem;
-            }
-
-            .testimonial-info h3 {
-                font-size: 1.2rem;
-            }
-
-            .play-button {
-                width: 60px;
-                height: 60px;
-                font-size: 1.5rem;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .contact-card {
-                padding: 2rem 1.5rem;
-            }
-
-            .contact-icon-box {
-                font-size: 2.5rem;
-            }
-
-            .maps-container {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .maps-info h3 {
-                font-size: 1.5rem;
-            }
-
-            .maps-info p {
-                font-size: 0.95rem;
-            }
-
-            .maps-embed {
-                height: 300px;
-            }
-
-            .quick-links-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .quick-link-card {
-                padding: 1.5rem;
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .quick-link-icon {
-                width: 60px;
-                height: 60px;
-                font-size: 1.5rem;
-                margin: 0 auto;
-            }
-
-            .quick-link-content {
-                margin: 1rem 0;
-            }
-
-            .quick-link-content h3 {
-                font-size: 1.2rem;
-            }
-
-            .quick-link-content p {
-                font-size: 0.85rem;
-            }
-
-            .modal-content {
-                width: 95%;
-                margin: 5% auto;
-                max-height: 90vh;
-                border-radius: 16px;
-            }
-
-            .modal-header {
-                padding: 1.5rem;
-            }
-
-            .modal-header h2 {
-                font-size: 1.5rem;
-            }
-
-            .modal-body {
-                padding: 1.5rem;
-            }
-
-            .form-group {
-                margin-bottom: 1.2rem;
-            }
-
-            .form-group label {
-                font-size: 0.9rem;
-            }
-
-            .form-group input,
-            .form-group select,
-            .form-group textarea {
-                padding: 0.8rem;
-                font-size: 0.9rem;
-            }
-
-            .submit-btn {
-                padding: 0.9rem;
-                font-size: 1rem;
-            }
-
-            .wa-float-btn {
-                width: 60px;
-                height: 60px;
-                bottom: 20px;
-                right: 20px;
-            }
-
-            .wa-float-btn svg {
-                width: 30px;
-                height: 30px;
-            }
-
-            footer {
-                padding: 2rem 1.5rem;
-            }
-
-            footer p {
-                font-size: 0.85rem;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .footer-links a {
-                font-size: 0.9rem;
-            }
-
-            .logo-box {
-                width: 45px;
-                height: 45px;
-            }
-
-            .brand h1 {
-                font-size: 1.3rem;
-            }
-
-            .brand span {
-                font-size: 0.75rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero-text h2 {
-                font-size: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .container {
-                padding: 2rem 1rem;
-            }
-
-            .service-card,
-            .price-card,
-            .contact-card {
-                padding: 1.5rem 1rem;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .testimonial-info {
-                padding: 1.2rem;
-            }
-
-            .play-button {
-                width: 50px;
-                height: 50px;
-                font-size: 1.2rem;
-            }
-
-            .modal-content {
-                width: 98%;
-                margin: 2% auto;
-            }
-        }
-    </style>
-    
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "ELService",
-      "description": "Jasa perbaikan gadget profesional dengan harga pelajar. Service Android, iPhone, Laptop, dan PC.",
-      "image": "https://raysatyaa.github.io/ElService/gambar/elservice.png",
-      "logo": "https://raysatyaa.github.io/ElService/gambar/elservice.png",
-      "url": "https://raysatyaa.github.io/ElService/",
-      "telephone": "+6288802142498",
-      "priceRange": "Rp 50.000 - Rp 500.000",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Jl. Siliwangi No.6, Haurgeulis",
-        "addressLocality": "Haurgeulis",
-        "addressRegion": "Jawa Barat",
-        "postalCode": "45264",
-        "addressCountry": "ID"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -6.460257484435829,
-        "longitude": 107.9447576061983
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "09:00",
-        "closes": "20:00"
-      },
-      "sameAs": [
-        "https://www.instagram.com/elservicee.id"
-      ],
-      "serviceArea": {
-        "@type": "City",
-        "name": "Haurgeulis"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Layanan Service Gadget",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Service Android",
-              "description": "Service dan perbaikan smartphone Android"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Service iPhone",
-              "description": "Service dan perbaikan iPhone"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Service Laptop & PC",
-              "description": "Service dan perbaikan laptop serta desktop PC"
-            }
-          }
-        ]
-      }
-    }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElService — Service Gadget Profesional</title>
+<meta name="description" content="ElService melayani service HP murah, service termurah, service iPhone, Android, laptop, dan PC area Bandung, Haurgeulis, hingga Indramayu. Harga estimasi transparan, konfirmasi stok sparepart, teknisi berpengalaman, dan garansi servis resmi.">
+<meta name="keywords" content="service murah, service termurah, service hp haurgeulis, service hp indramayu, service iphone murah, service android murah, service laptop murah, service pc murah, service gadget bandung, jasa service hp terpercaya, service hp terdekat">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ElService - Service Gadget Profesional & Harga Transparan">
+<meta property="og:description" content="Service HP murah dan termurah untuk iPhone, Android, laptop, serta PC. Bisa konsultasi via WhatsApp, cek estimasi harga, dan konfirmasi stok sparepart sebelum pengerjaan.">
+<meta property="og:locale" content="id_ID">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Bricolage+Grotesque:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+/* ===================== ROOT ===================== */
+:root {
+  --bg: #f4f6f8;
+  --white: #ffffff;
+  --surface: #eaf0f5;
+  --card: #ffffff;
+  --border: #dce5ec;
+  --border2: #edf2f7;
+
+  --violet: #325c7d;
+  --violet-light: #4b7699;
+  --violet-pale: #e8f0f6;
+  --orange: #d88952;
+  --orange-light: #e1a171;
+  --orange-pale: #fbf1ea;
+  --cyan: #3b90b5;
+  --cyan-pale: #e8f5fb;
+  --green: #2f9b82;
+  --green-pale: #e7f6f2;
+  --pink: #b56286;
+  --pink-pale: #f7eaf0;
+  --yellow: #d7a146;
+  --yellow-pale: #fbf6e8;
+
+  --text: #102433;
+  --text2: #395061;
+  --muted: #6d7f8c;
+  --shadow: 0 8px 24px rgba(16,36,51,.08);
+  --shadow-hover: 0 14px 36px rgba(16,36,51,.14);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+body.dark-mode {
+  --bg: #0f1720;
+  --white: #111b25;
+  --surface: #17232f;
+  --card: #111b25;
+  --border: #243548;
+  --border2: #1f2f40;
+  --violet: #78a7cb;
+  --violet-light: #9ec2de;
+  --violet-pale: #1b2d3e;
+  --orange: #d89a6f;
+  --orange-light: #e3b48f;
+  --orange-pale: #2c211a;
+  --cyan: #69b8da;
+  --cyan-pale: #1b3443;
+  --green: #62c8a6;
+  --green-pale: #18342d;
+  --pink: #d18eac;
+  --pink-pale: #332030;
+  --yellow: #e0ba6d;
+  --yellow-pale: #332a1a;
+  --text: #eaf3fb;
+  --text2: #bed0df;
+  --muted: #8ea6b8;
+  --shadow: 0 10px 28px rgba(0,0,0,.35);
+  --shadow-hover: 0 16px 40px rgba(0,0,0,.5);
+}
+
+h1,h2,h3,h4,h5 { font-family: 'Bricolage Grotesque', sans-serif; }
+
+/* ===================== SCROLLBAR ===================== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--violet-light); border-radius: 3px; }
+
+/* ===================== NAV ===================== */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(248,247,255,.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%; height: 68px;
+  transition: box-shadow .3s;
+}
+nav.scrolled { box-shadow: 0 4px 24px rgba(108,60,247,.08); }
+
+.nav-brand {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none;
+}
+.nav-logo-mark {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: linear-gradient(135deg, var(--violet), var(--orange));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; font-weight: 800; color: white;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  box-shadow: 0 4px 12px rgba(108,60,247,.35);
+  overflow: hidden;
+}
+.nav-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.nav-name {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800; font-size: 1.25rem; color: var(--text);
+  letter-spacing: -.02em;
+}
+.nav-name span { color: var(--violet); }
+
+.nav-links {
+  display: flex; align-items: center; gap: 6px;
+}
+.nav-links a {
+  color: var(--text2); text-decoration: none;
+  font-size: .875rem; font-weight: 500;
+  padding: 7px 14px; border-radius: 8px;
+  transition: background .2s, color .2s;
+}
+.nav-links a:hover { background: var(--violet-pale); color: var(--violet); }
+.nav-cta {
+  background: linear-gradient(135deg, var(--violet), var(--violet-light)) !important;
+  color: white !important; font-weight: 700 !important;
+  padding: 9px 20px !important; border-radius: 10px !important;
+  box-shadow: 0 4px 14px rgba(108,60,247,.35) !important;
+  transition: transform .2s, box-shadow .2s !important;
+}
+.nav-cta:hover { transform: translateY(-1px) !important; box-shadow: 0 8px 20px rgba(108,60,247,.45) !important; background: var(--violet-pale) !important; background: linear-gradient(135deg, var(--violet), var(--violet-light)) !important; }
+
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 6px; }
+.hamburger span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: .3s; display: block; }
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.nav-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.theme-toggle {
+  border: 1.5px solid var(--border);
+  background: white;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 7px 10px;
+  font-size: .78rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: transform .2s, border-color .2s, background .2s;
+}
+.theme-toggle:hover {
+  transform: translateY(-1px);
+  border-color: var(--violet);
+}
+body.dark-mode .theme-toggle {
+  background: #132231;
+}
+body.dark-mode nav {
+  background: rgba(15,23,32,.92);
+}
+body.dark-mode nav.scrolled {
+  box-shadow: 0 8px 24px rgba(0,0,0,.35);
+}
+body.dark-mode .section-alt {
+  background: #131d28;
+}
+body.dark-mode .hero-badge,
+body.dark-mode .btn-hero-secondary,
+body.dark-mode .stats-bar,
+body.dark-mode .confirm-notice,
+body.dark-mode .device-card,
+body.dark-mode .sp-chip,
+body.dark-mode .table-wrap,
+body.dark-mode .wa-strip,
+body.dark-mode .step-card,
+body.dark-mode .feat-card,
+body.dark-mode .testi-card,
+body.dark-mode .mdr-icon,
+body.dark-mode .btn-maps,
+body.dark-mode .maps-photo-card,
+body.dark-mode .seo-area-item,
+body.dark-mode .modal-box,
+body.dark-mode .form-input,
+body.dark-mode .form-select,
+body.dark-mode .form-textarea,
+body.dark-mode .price-search {
+  background: var(--card);
+  color: var(--text);
+  border-color: var(--border);
+}
+body.dark-mode .nav-links {
+  background: var(--card);
+}
+body.dark-mode .price-table thead tr {
+  background: var(--surface);
+}
+body.dark-mode .price-table tbody tr:hover td {
+  background: #162332;
+}
+body.dark-mode .price-confirm-banner {
+  background: linear-gradient(135deg, rgba(120,167,203,.12), rgba(216,137,82,.12));
+  border-color: rgba(120,167,203,.35);
+}
+body.dark-mode .q-ori  { background: #163429; color: #82e5c2; border-color: #285643; }
+body.dark-mode .q-com  { background: #362a16; color: #f2cb84; border-color: #644d27; }
+body.dark-mode .q-new  { background: #173243; color: #8fd0f1; border-color: #295a76; }
+body.dark-mode .q-srv  { background: #1b2d3e; color: #b9d8ee; border-color: #355675; }
+body.dark-mode .modal-top {
+  background: linear-gradient(135deg, #2a4a63, #8f6241);
+}
+body.dark-mode .btn-submit,
+body.dark-mode .btn-wa {
+  background: #2f9b82;
+  box-shadow: 0 6px 18px rgba(47,155,130,.35);
+}
+body.dark-mode .btn-pcb {
+  background: linear-gradient(135deg, #3b6688, #b2774e);
+}
+body.dark-mode .cta-band {
+  background: linear-gradient(135deg, #2b4f6c 0%, #8b603f 100%);
+}
+body.dark-mode .footer-desc,
+body.dark-mode .footer-col a,
+body.dark-mode .footer-bottom p {
+  color: rgba(233,244,252,.7);
+}
+body.dark-mode footer {
+  background: #0b131b;
+  color: #e9f4fc;
+}
+body.dark-mode .footer-col a:hover {
+  color: #ffffff;
+}
+body.dark-mode .blob1 { background: rgba(120,167,203,.14); }
+body.dark-mode .blob2 { background: rgba(216,137,82,.12); }
+body.dark-mode .blob3 { background: rgba(105,184,218,.12); }
+body.dark-mode .blob4 { background: rgba(98,200,166,.10); }
+
+/* ===================== HERO ===================== */
+.hero {
+  min-height: 100vh;
+  padding: 100px 5% 60px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+
+/* Colorful background blobs */
+.hero-blob {
+  position: absolute; border-radius: 50%;
+  filter: blur(72px); pointer-events: none;
+}
+.blob1 { width: 480px; height: 480px; background: rgba(108,60,247,.12); top: -100px; left: -100px; }
+.blob2 { width: 380px; height: 380px; background: rgba(255,107,53,.10); top: 0; right: -80px; }
+.blob3 { width: 320px; height: 320px; background: rgba(0,198,255,.09); bottom: 0; left: 30%; }
+.blob4 { width: 240px; height: 240px; background: rgba(6,214,160,.08); bottom: 60px; right: 5%; }
+
+/* Floating emoji decorations */
+.float-deco {
+  position: absolute; font-size: 2rem; opacity: .18;
+  animation: floatAnim 4s ease-in-out infinite;
+  pointer-events: none;
+}
+.fd1 { top: 18%; left: 7%; animation-delay: 0s; }
+.fd2 { top: 25%; right: 8%; animation-delay: .8s; font-size: 1.6rem; }
+.fd3 { bottom: 28%; left: 4%; animation-delay: 1.4s; font-size: 1.4rem; }
+.fd4 { bottom: 20%; right: 6%; animation-delay: .4s; }
+.fd5 { top: 60%; left: 12%; animation-delay: 1.8s; font-size: 1.2rem; }
+@keyframes floatAnim { 0%,100%{transform:translateY(0) rotate(0)} 50%{transform:translateY(-14px) rotate(5deg)} }
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: white; border: 1.5px solid var(--border);
+  border-radius: 40px; padding: 7px 18px;
+  font-size: .82rem; font-weight: 600; color: var(--violet);
+  box-shadow: var(--shadow); margin-bottom: 28px;
+  position: relative; z-index: 1;
+  animation: slideDown .5s ease both;
+}
+.badge-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--green); box-shadow: 0 0 0 3px rgba(6,214,160,.25);
+  animation: blink 1.5s infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
+@keyframes slideDown { from{opacity:0;transform:translateY(-16px)} to{opacity:1;transform:none} }
+
+.hero h1 {
+  font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+  font-weight: 800; line-height: 1.08;
+  letter-spacing: -.03em; margin-bottom: 20px;
+  position: relative; z-index: 1;
+  animation: slideUp .5s .1s ease both;
+}
+.hero h1 .grad {
+  background: linear-gradient(135deg, var(--violet) 0%, var(--orange) 60%, var(--pink) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  max-width: 540px; font-size: 1.05rem; color: var(--text2);
+  line-height: 1.72; margin-bottom: 36px;
+  position: relative; z-index: 1;
+  animation: slideUp .5s .2s ease both;
+}
+
+.hero-actions {
+  display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+  position: relative; z-index: 1;
+  animation: slideUp .5s .3s ease both;
+}
+.btn-hero-primary {
+  background: linear-gradient(135deg, var(--violet), var(--orange));
+  color: white; font-weight: 700; font-size: 1rem;
+  padding: 15px 32px; border-radius: 14px; border: none; cursor: pointer;
+  box-shadow: 0 6px 24px rgba(108,60,247,.35);
+  transition: transform .2s, box-shadow .2s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: flex; align-items: center; gap: 8px;
+}
+.btn-hero-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(108,60,247,.45); }
+
+.btn-hero-secondary {
+  background: white; color: var(--text);
+  font-weight: 600; font-size: 1rem;
+  padding: 15px 28px; border-radius: 14px;
+  border: 1.5px solid var(--border); cursor: pointer;
+  transition: border-color .2s, transform .2s;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: flex; align-items: center; gap: 8px;
+}
+.btn-hero-secondary:hover { border-color: var(--violet); color: var(--violet); transform: translateY(-3px); }
+
+/* STATS BAR */
+.stats-bar {
+  display: flex; gap: 0;
+  background: white; border: 1.5px solid var(--border);
+  border-radius: 20px; overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-top: 56px; max-width: 720px; width: 100%;
+  position: relative; z-index: 1;
+  animation: slideUp .5s .4s ease both;
+}
+.stat-item {
+  flex: 1; padding: 22px 16px; text-align: center;
+  border-right: 1px solid var(--border);
+  position: relative;
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.9rem; font-weight: 800; color: var(--violet);
+  line-height: 1;
+}
+.stat-label { font-size: .75rem; color: var(--muted); margin-top: 5px; font-weight: 500; }
+
+@keyframes slideUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+
+/* ===================== SECTION SHELL ===================== */
+.section { padding: 88px 5%; }
+.section-alt { background: white; }
+.container { max-width: 1080px; margin: 0 auto; }
+
+.section-eyebrow {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: .78rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--violet);
+  margin-bottom: 12px;
+}
+.eyebrow-line { width: 24px; height: 2px; background: linear-gradient(90deg, var(--violet), var(--orange)); border-radius: 1px; }
+
+.section-heading {
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 800; line-height: 1.15; letter-spacing: -.025em;
+  margin-bottom: 10px;
+}
+.section-sub { color: var(--muted); font-size: .95rem; max-width: 480px; line-height: 1.7; }
+
+/* ===================== CEK HARGA ===================== */
+#cek-harga { padding: 88px 5%; }
+
+/* CONFIRMED notice banner */
+.confirm-notice {
+  background: linear-gradient(135deg, var(--orange-pale), var(--yellow-pale));
+  border: 1.5px solid rgba(255,107,53,.2);
+  border-radius: 16px; padding: 16px 22px;
+  display: flex; align-items: flex-start; gap: 12px;
+  margin-bottom: 36px; max-width: 860px; margin-inline: auto;
+}
+.notice-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 1px; }
+.notice-text strong { font-size: .9rem; color: var(--orange); display: block; margin-bottom: 3px; }
+.notice-text p { font-size: .83rem; color: var(--text2); line-height: 1.6; }
+
+/* DEVICE CARDS */
+.device-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px; max-width: 860px; margin: 0 auto 48px;
+}
+.device-card {
+  background: white; border: 2px solid var(--border);
+  border-radius: 20px; padding: 28px 16px;
+  text-align: center; cursor: pointer;
+  transition: all .25s cubic-bezier(.34,1.56,.64,1);
+  position: relative; overflow: hidden;
+}
+.device-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; background: var(--dc);
+  transform: scaleX(0); transition: transform .25s;
+}
+.device-card:hover::after, .device-card.active::after { transform: scaleX(1); }
+.device-card:hover { transform: translateY(-6px); border-color: var(--dc); box-shadow: 0 12px 32px rgba(0,0,0,.08); }
+.device-card.active { border-color: var(--dc); background: var(--dc-pale); transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.1); }
+
+[data-device="iphone"]  { --dc: #6c3cf7; --dc-pale: #f5f2ff; }
+[data-device="android"] { --dc: #06d6a0; --dc-pale: #f0fff9; }
+[data-device="laptop"]  { --dc: #ff6b35; --dc-pale: #fff4f0; }
+[data-device="pc"]      { --dc: #00c6ff; --dc-pale: #f0fbff; }
+
+.dc-emoji { font-size: 2.6rem; margin-bottom: 12px; display: block; }
+.dc-name { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 1rem; color: var(--text); }
+.dc-sub { font-size: .75rem; color: var(--muted); margin-top: 5px; line-height: 1.4; }
+.dc-tag {
+  display: inline-block; margin-top: 10px;
+  font-size: .68rem; font-weight: 700; padding: 3px 10px;
+  border-radius: 20px; color: var(--dc);
+  background: var(--dc-pale); border: 1px solid var(--dc);
+}
+.device-card.active .dc-tag { background: var(--dc); color: white; }
+
+/* ===================== SPAREPART SECTION ===================== */
+#sp-section { display: none; }
+#sp-section.visible { display: block; animation: revealUp .4s ease both; }
+
+.sp-header-row {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 860px; margin: 0 auto 20px; flex-wrap: wrap; gap: 12px;
+}
+.sp-header-row h3 {
+  font-size: 1.1rem; font-weight: 700; color: var(--text2);
+}
+.sp-header-row h3 span { color: var(--violet); }
+
+.sp-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px; max-width: 860px; margin: 0 auto 36px;
+}
+.sp-chip {
+  background: white; border: 1.5px solid var(--border);
+  border-radius: 14px; padding: 16px 10px;
+  text-align: center; cursor: pointer;
+  transition: all .2s;
+}
+.sp-chip:hover { border-color: var(--violet); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(108,60,247,.1); }
+.sp-chip.active { border-color: var(--violet); background: var(--violet-pale); }
+.sp-chip-icon { font-size: 1.6rem; margin-bottom: 7px; display: block; }
+.sp-chip-label { font-size: .8rem; font-weight: 600; color: var(--text); }
+.sp-chip.active .sp-chip-label { color: var(--violet); }
+
+/* CONFIRM ALERT under sparepart */
+.sp-confirm-alert {
+  max-width: 860px; margin: 0 auto 24px;
+  background: var(--orange-pale); border: 1.5px solid rgba(255,107,53,.25);
+  border-radius: 14px; padding: 14px 20px;
+  display: flex; align-items: center; gap: 10px;
+  font-size: .84rem; color: var(--text2);
+}
+.sp-confirm-alert strong { color: var(--orange); }
+
+/* ===================== PRICE TABLE ===================== */
+#price-section { display: none; }
+#price-section.visible { display: block; animation: revealUp .4s ease both; }
+
+.price-toolbar {
+  max-width: 860px; margin: 0 auto 16px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.price-toolbar h3 { font-size: 1.05rem; font-weight: 700; }
+.price-toolbar h3 span { color: var(--violet); }
+
+.search-wrap {
+  position: relative; display: flex; align-items: center;
+}
+.search-wrap svg {
+  position: absolute; left: 12px; color: var(--muted);
+  pointer-events: none;
+}
+.price-search {
+  background: white; border: 1.5px solid var(--border);
+  color: var(--text); padding: 9px 14px 9px 38px;
+  border-radius: 10px; font-size: .875rem; outline: none;
+  width: 220px; font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: border-color .2s;
+}
+.price-search:focus { border-color: var(--violet); box-shadow: 0 0 0 3px rgba(108,60,247,.12); }
+
+.table-wrap {
+  max-width: 860px; margin: 0 auto;
+  background: white; border: 1.5px solid var(--border);
+  border-radius: 20px; overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.price-table { width: 100%; border-collapse: collapse; }
+.price-table thead tr { background: var(--surface); }
+.price-table th {
+  padding: 13px 18px; text-align: left;
+  font-size: .75rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .07em; color: var(--muted);
+}
+.price-table td {
+  padding: 14px 18px; border-top: 1px solid var(--border2);
+  font-size: .875rem; vertical-align: middle;
+}
+.price-table tbody tr:hover td { background: var(--surface); }
+
+.td-model { font-weight: 600; color: var(--text); }
+.td-part { color: var(--text2); }
+.quality-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 10px; border-radius: 20px;
+  font-size: .72rem; font-weight: 700;
+}
+.q-ori  { background: #e0fff6; color: #059669; border: 1px solid #a7f3d0; }
+.q-com  { background: var(--yellow-pale); color: #d97706; border: 1px solid #fde68a; }
+.q-new  { background: var(--cyan-pale); color: #0284c7; border: 1px solid #bae6fd; }
+.q-srv  { background: var(--violet-pale); color: var(--violet); border: 1px solid #ddd6fe; }
+
+.td-price { font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: .95rem; color: var(--text); }
+.td-est { font-size: .8rem; color: var(--muted); }
+
+.price-empty-row td { text-align: center; padding: 48px; color: var(--muted); }
+
+/* CONFIRM BANNER INSIDE TABLE */
+.price-confirm-banner {
+  max-width: 860px; margin: 0 auto 0;
+  background: linear-gradient(135deg, rgba(108,60,247,.06), rgba(255,107,53,.06));
+  border: 1.5px dashed rgba(108,60,247,.25);
+  border-radius: 0 0 20px 20px; padding: 18px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 14px;
+}
+.pcb-left { display: flex; align-items: center; gap: 12px; }
+.pcb-icon { font-size: 1.5rem; }
+.pcb-text strong { font-size: .88rem; color: var(--violet); display: block; }
+.pcb-text p { font-size: .8rem; color: var(--muted); margin-top: 2px; }
+.btn-pcb {
+  background: linear-gradient(135deg, var(--violet), var(--orange));
+  color: white; padding: 10px 22px; border-radius: 10px;
+  font-weight: 700; font-size: .875rem; border: none; cursor: pointer;
+  text-decoration: none; display: inline-block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: transform .2s, box-shadow .2s;
+  white-space: nowrap;
+}
+.btn-pcb:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(108,60,247,.35); }
+
+/* WA QUICK */
+.wa-strip {
+  max-width: 860px; margin: 16px auto 0;
+  background: linear-gradient(135deg, #dcfce7, #f0fdf4);
+  border: 1.5px solid #bbf7d0; border-radius: 16px;
+  padding: 18px 24px; display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 14px;
+}
+.wa-strip-left { display: flex; align-items: center; gap: 12px; }
+.wa-strip-icon { font-size: 1.8rem; }
+.wa-strip-left h4 { font-size: .9rem; font-weight: 700; color: #065f46; }
+.wa-strip-left p { font-size: .78rem; color: #34d399; }
+.btn-wa {
+  background: #22c55e; color: white;
+  padding: 10px 22px; border-radius: 10px;
+  font-weight: 700; font-size: .875rem; border: none; cursor: pointer;
+  text-decoration: none; display: inline-block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 4px 12px rgba(34,197,94,.3);
+}
+.btn-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(34,197,94,.4); }
+
+/* ===================== HOW IT WORKS ===================== */
+.steps-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+.step-card {
+  background: white; border: 1.5px solid var(--border);
+  border-radius: 20px; padding: 30px 24px;
+  position: relative; overflow: hidden;
+  transition: transform .25s, box-shadow .25s;
+}
+.step-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+
+.step-num-bg {
+  position: absolute; top: -10px; right: -4px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 5rem; font-weight: 800;
+  color: rgba(108,60,247,.06); line-height: 1; user-select: none;
+}
+.step-pill {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--violet-pale); color: var(--violet);
+  padding: 4px 12px; border-radius: 20px;
+  font-size: .72rem; font-weight: 700;
+  margin-bottom: 14px;
+}
+.step-icon-wrap {
+  width: 48px; height: 48px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; margin-bottom: 14px;
+}
+.step-title { font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
+.step-desc { font-size: .84rem; color: var(--muted); line-height: 1.65; }
+
+/* ===================== FEATURES ===================== */
+.features-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 18px;
+}
+.feat-card {
+  background: var(--bg); border: 1.5px solid var(--border);
+  border-radius: 18px; padding: 24px;
+  display: flex; gap: 16px; align-items: flex-start;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+.feat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--fc-color, var(--violet)); }
+.feat-icon-box {
+  width: 46px; height: 46px; border-radius: 13px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; flex-shrink: 0;
+  background: var(--fc-pale, var(--violet-pale));
+}
+.feat-title { font-weight: 700; font-size: .95rem; margin-bottom: 6px; }
+.feat-desc { font-size: .83rem; color: var(--muted); line-height: 1.6; }
+
+/* ===================== TESTIMONIALS ===================== */
+.testi-grid {
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+.testi-track {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  animation: testiScroll 120s linear infinite;
+}
+.testi-grid:hover .testi-track {
+  animation-play-state: paused;
+}
+.testi-card {
+  width: 310px;
+  flex: 0 0 auto;
+  background: white; border: 1.5px solid var(--border);
+  border-radius: 20px; padding: 26px;
+  transition: transform .2s, box-shadow .2s;
+}
+.testi-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.testi-rating { display: flex; gap: 3px; margin-bottom: 14px; }
+.testi-star { color: var(--yellow); font-size: 1rem; }
+.testi-quote { font-size: .88rem; color: var(--text2); line-height: 1.72; margin-bottom: 18px; }
+.testi-footer { display: flex; align-items: center; gap: 12px; }
+.testi-ava {
+  width: 40px; height: 40px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .95rem; font-weight: 800; color: white;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  flex-shrink: 0;
+}
+.testi-name { font-weight: 700; font-size: .875rem; }
+.testi-loc { font-size: .75rem; color: var(--muted); margin-top: 2px; }
+@keyframes testiScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===================== MAPS SECTION ===================== */
+.maps-section { padding: 88px 5%; background: var(--surface); }
+.maps-inner {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  gap: 40px; align-items: center; max-width: 1080px; margin: 0 auto;
+}
+.maps-info h2 { font-size: clamp(1.6rem,3vw,2.4rem); font-weight: 800; margin-bottom: 16px; }
+.maps-info p { color: var(--muted); font-size: .9rem; line-height: 1.7; margin-bottom: 28px; }
+.maps-details { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+.maps-detail-row { display: flex; align-items: flex-start; gap: 12px; }
+.mdr-icon {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: white; border: 1.5px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.mdr-label { font-size: .75rem; color: var(--muted); font-weight: 500; }
+.mdr-val { font-size: .9rem; font-weight: 600; color: var(--text); }
+.btn-maps {
+  background: white; color: var(--violet);
+  padding: 12px 24px; border-radius: 12px;
+  font-weight: 700; font-size: .9rem; border: 2px solid var(--violet);
+  cursor: pointer; text-decoration: none; display: inline-flex;
+  align-items: center; gap: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: all .2s;
+}
+.btn-maps:hover { background: var(--violet); color: white; transform: translateY(-2px); }
+
+.maps-frame {
+  border-radius: 20px; overflow: hidden;
+  border: 1.5px solid var(--border);
+  box-shadow: var(--shadow); aspect-ratio: 4/3;
+  background: var(--border);
+}
+.maps-frame iframe { width: 100%; height: 100%; border: none; display: block; }
+.maps-photo-card {
+  margin-top: 14px;
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.maps-photo-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.maps-photo-card figcaption {
+  padding: 10px 14px;
+  font-size: .78rem;
+  color: var(--muted);
+}
+
+/* ===================== CTA BAND ===================== */
+.cta-band {
+  margin: 0 5% 88px; border-radius: 28px;
+  background: linear-gradient(135deg, var(--violet) 0%, var(--orange) 100%);
+  padding: 64px 48px; text-align: center;
+  position: relative; overflow: hidden;
+}
+.cta-band::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='30' r='20' stroke='white' stroke-width='.5' fill='none' opacity='.1'/%3E%3C/svg%3E") repeat;
+}
+.cta-band h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem); color: white; margin-bottom: 10px;
+  position: relative;
+}
+.cta-band p { color: rgba(255,255,255,.8); margin-bottom: 28px; position: relative; font-size: .95rem; }
+.btn-cta-wa {
+  background: white; color: var(--violet);
+  padding: 15px 36px; border-radius: 14px;
+  font-weight: 800; font-size: 1rem; border: none; cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: inline-flex; align-items: center; gap: 10px;
+  transition: transform .2s, box-shadow .2s;
+  position: relative;
+  box-shadow: 0 6px 24px rgba(0,0,0,.2);
+}
+.btn-cta-wa:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,.3); }
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: var(--text); color: var(--bg);
+  padding: 60px 5% 32px;
+}
+.footer-top {
+  display: grid; grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: 40px; margin-bottom: 48px;
+}
+.footer-brand-name {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.4rem; font-weight: 800; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 10px;
+}
+.footer-brand-name .fb-mark {
+  width: 34px; height: 34px; border-radius: 9px;
+  background: linear-gradient(135deg, var(--violet), var(--orange));
+  display: flex; align-items: center; justify-content: center;
+  font-size: .9rem; font-weight: 800; color: white;
+}
+.footer-desc { font-size: .84rem; color: rgba(255,255,255,.45); line-height: 1.7; max-width: 220px; margin-bottom: 22px; }
+
+.social-row { display: flex; gap: 10px; }
+.social-link {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .95rem; text-decoration: none; color: white;
+  transition: background .2s, transform .2s;
+}
+.social-link:hover { background: var(--violet); transform: translateY(-2px); }
+.social-link.tiktok:hover { background: #010101; }
+.social-link.ig:hover { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-link.wa:hover { background: #25d366; }
+.social-link.maps:hover { background: #4285f4; }
+
+.footer-col h5 { font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.4); margin-bottom: 16px; }
+.footer-col a {
+  display: block; font-size: .85rem; color: rgba(255,255,255,.65);
+  text-decoration: none; margin-bottom: 10px;
+  transition: color .2s;
+}
+.footer-col a:hover { color: white; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 10px;
+}
+.footer-bottom p { font-size: .8rem; color: rgba(255,255,255,.35); }
+
+/* ===================== MODAL ===================== */
+.modal-overlay {
+  display: none; position: fixed; inset: 0; z-index: 500;
+  background: rgba(26,16,53,.6); backdrop-filter: blur(12px);
+  align-items: center; justify-content: center; padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.promo-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 700;
+  background: rgba(10,20,30,.64);
+  backdrop-filter: blur(8px);
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+.promo-overlay.open { display: flex; }
+.promo-box {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: white;
+  border: 1.5px solid var(--border);
+  box-shadow: 0 30px 80px rgba(16,36,51,.32);
+}
+.promo-head {
+  background: linear-gradient(135deg, var(--orange), var(--violet));
+  color: white;
+  padding: 22px 24px;
+  position: relative;
+}
+.promo-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(255,255,255,.22);
+  color: white;
+  font-weight: 700;
+}
+.promo-body {
+  padding: 20px 24px 24px;
+}
+.promo-tag {
+  display: inline-flex;
+  padding: 4px 11px;
+  border-radius: 20px;
+  font-size: .72rem;
+  font-weight: 700;
+  background: var(--orange-pale);
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.promo-list {
+  margin: 12px 0 18px;
+  display: grid;
+  gap: 8px;
+  color: var(--text2);
+  font-size: .88rem;
+}
+.promo-list div {
+  padding: 10px 12px;
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.promo-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.btn-promo-primary,
+.btn-promo-secondary {
+  border: none;
+  border-radius: 11px;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .84rem;
+  cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.btn-promo-primary {
+  background: linear-gradient(135deg, var(--violet), var(--orange));
+  color: white;
+}
+.btn-promo-secondary {
+  background: white;
+  color: var(--text2);
+  border: 1.5px solid var(--border);
+}
+body.dark-mode .promo-box { background: var(--card); border-color: var(--border); }
+body.dark-mode .promo-list div { background: #132130; border-color: var(--border); color: var(--text2); }
+.modal-box {
+  background: white; border-radius: 28px;
+  width: 100%; max-width: 540px; max-height: 90vh;
+  overflow-y: auto; padding: 0;
+  animation: modalPop .35s cubic-bezier(.34,1.56,.64,1) both;
+  box-shadow: 0 32px 80px rgba(108,60,247,.25);
+}
+@keyframes modalPop { from{opacity:0;transform:scale(.9) translateY(16px)} to{opacity:1;transform:none} }
+
+.modal-top {
+  background: linear-gradient(135deg, var(--violet), var(--orange));
+  padding: 28px 32px 24px; border-radius: 28px 28px 0 0;
+  position: relative;
+}
+.modal-close-btn {
+  position: absolute; top: 16px; right: 16px;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(255,255,255,.2); border: none;
+  color: white; font-size: 1rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background .2s;
+}
+.modal-close-btn:hover { background: rgba(255,255,255,.35); }
+.modal-top h3 { font-size: 1.3rem; color: white; margin-bottom: 4px; }
+.modal-top p { font-size: .84rem; color: rgba(255,255,255,.8); }
+
+.modal-body { padding: 28px 32px 32px; }
+
+.modal-notice {
+  background: var(--orange-pale); border: 1.5px solid rgba(255,107,53,.2);
+  border-radius: 12px; padding: 13px 16px;
+  font-size: .82rem; color: var(--text2); line-height: 1.6;
+  margin-bottom: 22px; display: flex; gap: 10px;
+}
+.modal-notice-icon { font-size: 1.1rem; flex-shrink: 0; }
+
+.form-group { margin-bottom: 16px; }
+.form-label {
+  display: block; font-size: .78rem; font-weight: 700;
+  color: var(--text2); margin-bottom: 7px;
+  text-transform: uppercase; letter-spacing: .06em;
+}
+.form-input, .form-select, .form-textarea {
+  width: 100%; background: var(--surface);
+  border: 1.5px solid var(--border); color: var(--text);
+  padding: 11px 14px; border-radius: 12px;
+  font-size: .9rem; outline: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  transition: border-color .2s, box-shadow .2s;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--violet); box-shadow: 0 0 0 3px rgba(108,60,247,.12);
+  background: white;
+}
+.form-select { appearance: none; cursor: pointer; }
+.form-textarea { resize: vertical; min-height: 90px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+.required { color: var(--orange); }
+
+.btn-submit {
+  width: 100%; margin-top: 10px;
+  background: #22c55e; color: white;
+  padding: 15px; border-radius: 14px;
+  font-weight: 700; font-size: 1rem; border: none; cursor: pointer;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 4px 16px rgba(34,197,94,.3);
+}
+.btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(34,197,94,.45); }
+.btn-submit-sub { font-size: .77rem; opacity: .85; display: block; font-weight: 400; margin-top: 3px; }
+
+/* WA FLOAT */
+.wa-float-btn {
+  position: fixed; bottom: 28px; right: 28px; z-index: 300;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: #22c55e;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.7rem; text-decoration: none;
+  box-shadow: 0 6px 24px rgba(34,197,94,.45);
+  animation: floatBtn 3s ease-in-out infinite;
+  transition: transform .2s;
+}
+.wa-float-btn:hover { transform: scale(1.12) !important; }
+@keyframes floatBtn { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+
+.wa-float-pulse {
+  position: absolute; top: -3px; right: -3px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--orange); border: 2px solid white;
+  animation: pulseDot 1.5s infinite;
+}
+@keyframes pulseDot { 0%,100%{transform:scale(1)} 50%{transform:scale(1.3)} }
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes revealUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:none} }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .55s ease, transform .55s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-delay1 { transition-delay: .1s; }
+.reveal-delay2 { transition-delay: .2s; }
+.reveal-delay3 { transition-delay: .3s; }
+
+/* ===================== SEO AREA SECTION ===================== */
+.seo-area-list {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.seo-area-item {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  font-size: .84rem;
+  color: var(--text2);
+}
+.seo-notes {
+  margin-top: 18px;
+  font-size: .86rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+  .device-grid { grid-template-columns: repeat(2,1fr); }
+  .maps-inner { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .theme-toggle { padding: 7px 9px; font-size: .74rem; }
+  .nav-links {
+    display: none; position: fixed;
+    top: 68px; left: 0; right: 0; bottom: 0;
+    background: white; border-top: 1px solid var(--border);
+    flex-direction: column; padding: 28px 5%;
+    gap: 4px; overflow-y: auto; z-index: 199;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 12px 14px; border-radius: 12px; font-size: 1rem; }
+  .nav-cta { text-align: center; justify-content: center; }
+  .stats-bar { flex-direction: column; }
+  .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
+  .stat-item:last-child { border-bottom: none; }
+  .form-grid { grid-template-columns: 1fr; }
+  .cta-band { margin: 0 4% 60px; padding: 44px 28px; }
+  .modal-body { padding: 22px 22px 28px; }
+  .modal-top { padding: 24px 22px 20px; }
+
+  /* Mobile-friendly price table: card layout */
+  .table-wrap { border-radius: 14px; overflow: visible; }
+  .price-table thead { display: none; }
+  .price-table, .price-table tbody, .price-table tr, .price-table td {
+    display: block;
+    width: 100%;
+  }
+  .price-table tbody tr {
+    border-top: 1px solid var(--border2);
+    padding: 8px 0;
+  }
+  .price-table tbody tr:first-child { border-top: none; }
+  .price-table td {
+    border-top: none;
+    padding: 8px 14px;
+  }
+  .price-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: var(--muted);
+    margin-bottom: 4px;
+    font-weight: 700;
+  }
+  .price-empty-row td { text-align: left; padding: 16px 14px; }
+  .price-empty-row td::before { content: ""; margin: 0; }
+}
+@media (max-width: 480px) {
+  .device-grid { grid-template-columns: repeat(2,1fr); }
+  .footer-top { grid-template-columns: 1fr; }
+  nav { padding: 0 4%; }
+  .hero { padding: 90px 4% 48px; }
+}
+</style>
 </head>
 <body>
-    <header class="header">
-        <div class="nav-container">
-            <div class="logo-section">
-                <div class="logo-box">
-                    <img src="gambar/elservice.png" alt="ELService" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                </div>
-                <div class="brand">
-                    <h1>ElService</h1>
-                    <span>Jasa Perbaikan Gadget Profesional</span>
-                </div>
-            </div>
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav id="mobileNav">
-                <ul>
-                    <li><a href="#services" onclick="closeMobileMenu()">Layanan</a></li>
-                    <li><a href="#pricing" onclick="closeMobileMenu()">Harga</a></li>
-                    <li><a href="#features" onclick="closeMobileMenu()">Keunggulan</a></li>
-                    <li><a href="blog.html" onclick="closeMobileMenu()">Blog</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" onclick="event.preventDefault(); toggleDropdown(event);">
-                            Akses Cepat <i class="fas fa-chevron-down"></i>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a href="https://www.instagram.com/elservicee.id?igsh=YjgxbjRiYzMweXNw&utm_source=qr" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()">
-                                <i class="fab fa-instagram"></i>
-                                <span>Instagram</span>
-                            </a>
-                            <a href="https://raysatyaa.github.io/kerja-sama/" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()">
-                                <i class="fas fa-handshake"></i>
-                                <span>Proposal Kerja Sama</span>
-                            </a>
-                            <a href="https://raysatyaa.github.io/daftar-harga/" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()">
-                                <i class="fas fa-dollar-sign"></i>
-                                <span>Daftar Harga Lengkap</span>
-                            </a>
-                            <a href="https://maps.app.goo.gl/XKxUGKmyL2o1Hgac6" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>Lokasi Toko</span>
-                            </a>
-                        </div>
-                    </li>
-                    <li><a href="#contact" class="cta-nav" onclick="closeMobileMenu()">Hubungi Kami</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <section class="hero">
-        <div class="particles">
-            <div class="particle" style="left: 10%; animation-duration: 8s;"></div>
-            <div class="particle" style="left: 20%; animation-duration: 12s; animation-delay: 2s;"></div>
-            <div class="particle" style="left: 30%; animation-duration: 10s; animation-delay: 4s;"></div>
-            <div class="particle" style="left: 40%; animation-duration: 15s;"></div>
-            <div class="particle" style="left: 50%; animation-duration: 9s; animation-delay: 3s;"></div>
-            <div class="particle" style="left: 60%; animation-duration: 11s; animation-delay: 1s;"></div>
-            <div class="particle" style="left: 70%; animation-duration: 13s; animation-delay: 5s;"></div>
-            <div class="particle" style="left: 80%; animation-duration: 14s;"></div>
-            <div class="particle" style="left: 90%; animation-duration: 10s; animation-delay: 2s;"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-grid">
-                <div class="hero-text">
-                    <h2>Service Gadget Profesional dengan Harga Pelajar</h2>
-                    <p>Solusi terpercaya untuk semua kerusakan smartphone, laptop, dan PC. Teknisi berpengalaman, harga terjangkau, hasil maksimal.</p>
-                    <div class="hero-buttons">
-                        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Konsultasi Gratis</button>
-                        <button class="btn-secondary" onclick="window.location.href='https://raysatyaa.github.io/daftar-harga/'">Lihat Harga</button>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="floating-cards">
-                        <div class="floating-card">
-                            <div class="floating-card-icon">⚡</div>
-                            <h4>Pengerjaan Cepat</h4>
-                            <p>1-2 hari selesai</p>
-                        </div>
-                        <div class="floating-card">
-                            <div class="floating-card-icon">✅</div>
-                            <h4>Garansi Service</h4>
-                            <p>30 hari garansi</p>
-                        </div>
-                        <div class="floating-card">
-                            <div class="floating-card-icon">💰</div>
-                            <h4>Harga Terjangkau</h4>
-                            <p>Khusus pelajar</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ====== NAVBAR ====== -->
+<nav id="mainNav">
+  <a class="nav-brand" href="#">
+    <div class="nav-logo-mark">
+      <img class="nav-logo-img" src="logo.png" alt="Logo ElService" loading="lazy">
+    </div>
+    <span class="nav-name">El<span>Service</span></span>
+  </a>
+  <div class="nav-links" id="navLinks">
+    <a href="#cek-harga">🔧 Cek Harga</a>
+    <a href="#cara-kerja">📋 Cara Kerja</a>
+    <a href="#keunggulan">⭐ Keunggulan</a>
+    <a href="#lokasi">📍 Lokasi</a>
+    <a href="#" class="nav-cta" onclick="openModal();return false;">💬 Konsultasi Gratis</a>
+  </div>
+  <div class="nav-tools">
+    <button class="theme-toggle" id="themeToggleBtn" onclick="toggleTheme()">Mode Gelap</button>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
 
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Layanan Kami</div>
-                <h2 class="section-title">Solusi Lengkap untuk Semua Gadget</h2>
-                <p class="section-subtitle">Dari kerusakan ringan hingga berat, kami tangani dengan professional dan cepat</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>Service Android</h3>
-                    <ul class="service-list">
-                        <li>Ganti LCD & Touchscreen</li>
-                        <li>Perbaikan Mesin & IC Power</li>
-                        <li>Ganti Baterai Original</li>
-                        <li>Masalah Charging & Port USB</li>
-                        <li>Upgrade & Install ROM</li>
-                        <li>Perbaikan Speaker & Microphone</li>
-                    </ul>
-                </div>
+<!-- ====== HERO ====== -->
+<section class="hero">
+  <div class="hero-blob blob1"></div>
+  <div class="hero-blob blob2"></div>
+  <div class="hero-blob blob3"></div>
+  <div class="hero-blob blob4"></div>
+  <div class="float-deco fd1">📱</div>
+  <div class="float-deco fd2">💻</div>
+  <div class="float-deco fd3">🔧</div>
+  <div class="float-deco fd4">⚡</div>
+  <div class="float-deco fd5">🛡️</div>
 
-                <div class="service-card">
-                    <div class="service-icon">🍎</div>
-                    <h3>Service iPhone</h3>
-                    <ul class="service-list">
-                        <li>Ganti LCD Original & Aftermarket</li>
-                        <li>Perbaikan Motherboard</li>
-                        <li>Battery Replacement Original</li>
-                        <li>Face ID & Touch ID Repair</li>
-                        <li>iOS Update & Troubleshooting</li>
-                        <li>Water Damage Recovery</li>
-                    </ul>
-                </div>
+  <div class="hero-badge">
+    <span class="badge-dot"></span>
+    Service Gadget Profesional · Bandung
+  </div>
 
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Service Desktop & Laptop</h3>
-                    <ul class="service-list">
-                        <li>Install Windows 10/11 Original</li>
-                        <li>Upgrade RAM & SSD</li>
-                        <li>Ganti Keyboard, LCD, Hinge</li>
-                        <li>Deep Cleaning & Thermal Paste</li>
-                        <li>Repair Charging Port</li>
-                        <li>Data Recovery & Backup</li>
-                        <li>Rakit PC Sesuai Budget</li>
-                        <li>Upgrade Hardware PC</li>
-                        <li>Setup Gaming & Rendering</li>
-                    </ul>
-                </div>
+  <h1>
+    Gadget Bermasalah?<br>
+    <span class="grad">ElService Solusinya!</span>
+  </h1>
+  <p class="hero-sub">
+    Harga transparan, teknisi berpengalaman, garansi resmi.
+    iPhone, Android, Laptop, PC — kami tangani dengan cepat dan profesional.
+  </p>
+  <div class="hero-actions">
+    <button class="btn-hero-primary" onclick="document.getElementById('cek-harga').scrollIntoView({behavior:'smooth'})">
+      🔍 Cek Harga Sekarang
+    </button>
+    <button class="btn-hero-secondary" onclick="openModal()">
+      💬 Konsultasi Gratis
+    </button>
+  </div>
 
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>On-Site Service</h3>
-                    <ul class="service-list">
-                        <li>Service ke Rumah/Kantor</li>
-                        <li>Khusus Area Haurgeulis</li>
-                        <li>Install & Setup di Lokasi</li>
-                        <li>Troubleshooting On-Site</li>
-                        <li>Konsultasi Langsung</li>
-                        <li>Gratis Konsultasi</li>
-                    </ul>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 2rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1)); border-radius: 15px; animation: fadeInUp 0.8s ease-out;">
-                <p style="color: #6366f1; font-weight: 600; font-size: 1.1rem;">🏠 Layanan On-Site Service tersedia untuk area Haurgeulis dan sekitarnya</p>
-            </div>
-        </div>
-    </section>
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">2.000+</div>
+      <div class="stat-label">Gadget Terservis</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">98%</div>
+      <div class="stat-label">Kepuasan Pelanggan</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">< 2 Jam</div>
+      <div class="stat-label">Rata-rata Servis</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3 Bln</div>
+      <div class="stat-label">Garansi Resmi</div>
+    </div>
+  </div>
+</section>
 
-    <section id="pricing" class="pricing-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Harga Transparan</div>
-                <h2 class="section-title">Harga Khusus Pelajar & Mahasiswa</h2>
-                <p class="section-subtitle">Tidak ada biaya tersembunyi, gratis konsultasi dan diagnosa</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="price-card featured">
-                    <div class="featured-badge">Paling Populer</div>
-                    <h3>Smartphone</h3>
-                    <div class="price">50K</div>
-                    <p class="price-note">Mulai dari</p>
-                    <ul class="price-features">
-                        <li>Gratis Cek Kerusakan</li>
-                        <li>Gratis Konsultasi</li>
-                        <li>Garansi Service</li>
-                        <li>Spare Part Berkualitas</li>
-                    </ul>
-                </div>
-
-                <div class="price-card featured">
-                    <div class="featured-badge">Paling Populer</div>
-                    <h3>Laptop</h3>
-                    <div class="price">75K</div>
-                    <p class="price-note">Mulai dari</p>
-                    <ul class="price-features">
-                        <li>Install Windows Original</li>
-                        <li>Gratis Software Essentials</li>
-                        <li>Gratis Cleaning</li>
-                        <li>Garansi 30 Hari</li>
-                    </ul>
-                </div>
-
-                <div class="price-card">
-                    <h3>PC & Rakit</h3>
-                    <div class="price">50K</div>
-                    <p class="price-note">Mulai dari</p>
-                    <ul class="price-features">
-                        <li>Konsultasi Build PC</li>
-                        <li>Free Assembly</li>
-                        <li>Cable Management</li>
-                        <li>Setup & Optimasi</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="features-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Mengapa Pilih Kami</div>
-                <h2 class="section-title">Komitmen Kualitas & Kepercayaan</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon-box">💰</div>
-                    <h3>Harga Pelajar</h3>
-                    <p>Harga special untuk pelajar dan mahasiswa tanpa mengurangi kualitas service</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon-box">⚡</div>
-                    <h3>Pengerjaan Cepat</h3>
-                    <p>Mayoritas kerusakan selesai dalam 1-2 hari kerja, express service tersedia</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon-box">✅</div>
-                    <h3>Garansi Resmi</h3>
-                    <p>Garansi service hingga 30 hari untuk semua pekerjaan yang kami lakukan</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon-box">🔧</div>
-                    <h3>Teknisi Bersertifikat</h3>
-                    <p>Ditangani oleh teknisi berpengalaman dan terlatih dengan peralatan modern</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon-box">🏠</div>
-                    <h3>On-Site Service</h3>
-                    <p>Layanan service ke rumah atau kantor khusus untuk area Haurgeulis dan sekitarnya</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label" style="color: rgba(255,255,255,0.9)">Hubungi Kami</div>
-                <h2 class="section-title" style="color: white">Konsultasi Gratis Sekarang</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.9)">Tim kami siap membantu menyelesaikan masalah gadget Anda</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon-box">📱</div>
-                    <h3>WhatsApp</h3>
-                    <p><a href="https://wa.me/6288802142498">0888-0214-2498</a></p>
-                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Fast Response 24/7</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon-box">📍</div>
-                    <h3>Lokasi Kami</h3>
-                    <p>Jl. Siliwangi No.6, Haurgeulis, Kec. Haurgeulis, Kabupaten Indramayu, Jawa Barat 45264, Indonesia<br>Sebelah Alluna Laundry Express</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Masuk ke belakang</p>
-                </div>
-                <div class="contact-card">
-                    <div class="contact-icon-box">🕐</div>
-                    <h3>Jam Operasional</h3>
-                    <p>Setiap Hari<br>09.00 - 20.00 WIB</p>
-                    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;"></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="maps-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Lokasi Kami</div>
-                <h2 class="section-title">Temukan Kami di Sini</h2>
-            </div>
-            <div class="maps-container">
-                <div class="maps-info">
-                    <h3>📍 Alamat Lengkap</h3>
-                    <p>Kami berlokasi strategis dan mudah dijangkau. Pastikan Anda menemukan lokasi yang tepat!</p>
-                    
-                    <div class="maps-detail">
-                        <strong>Alamat Lengkap:</strong>
-                        Jl. Siliwangi No.6, Haurgeulis, Kec. Haurgeulis, Kabupaten Indramayu, Jawa Barat 45264
-                    </div>
-
-                    <div class="maps-detail">
-                        <strong>Patokan:</strong>
-                        Sebelah kanan Alluna Laundry Express, kemudian masuk ke belakang
-                    </div>
-
-                    <div class="maps-detail" style="background: linear-gradient(135deg, #ecfdf5, #d1fae5); border-left-color: #10b981;">
-                        <strong style="color: #10b981;">🏠 On-Site Service:</strong>
-                        Kami melayani service ke rumah untuk area Haurgeulis dan sekitarnya. Hubungi kami untuk jadwal kunjungan!
-                    </div>
-
-                    <p style="margin-top: 1.5rem;">Jika ada kesulitan menemukan lokasi, jangan ragu untuk menghubungi kami via WhatsApp!</p>
-                </div>
-                <div class="maps-embed">
-                    <iframe src="https://www.google.com/maps/embed?pb=!4v1732936585627!6m8!1m7!1shmZRkBK9d1PjM9n4Pl_TjQ!2m2!1d-6.460257484435829!2d107.9447576061983!3f245.24510820574586!4f-7.773635357413269!5f0.7820865974627469" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quick Links Section -->
-    <section class="quick-links-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Link Terkait</div>
-                <h2 class="section-title">Akses Cepat</h2>
-                <p class="section-subtitle">Temukan lebih banyak informasi dan layanan kami</p>
-            </div>
-            <div class="quick-links-grid">
-                <a href="https://www.instagram.com/elservicee.id?igsh=YjgxbjRiYzMweXNw&utm_source=qr" class="quick-link-card instagram-link" target="_blank" rel="noopener noreferrer">
-                    <div class="quick-link-icon instagram-icon">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <div class="quick-link-content">
-                        <h3>Instagram</h3>
-                        <p>Follow untuk update & promo menarik</p>
-                    </div>
-                    <div class="quick-link-arrow">→</div>
-                </a>
-
-                <a href="https://raysatyaa.github.io/kerja-sama/" class="quick-link-card partnership-link" target="_blank" rel="noopener noreferrer">
-                    <div class="quick-link-icon partnership-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <div class="quick-link-content">
-                        <h3>Proposal Kerja Sama</h3>
-                        <p>Program partnership dengan komisi menarik</p>
-                    </div>
-                    <div class="quick-link-arrow">→</div>
-                </a>
-
-                <a href="https://raysatyaa.github.io/daftar-harga/" class="quick-link-card price-link" target="_blank" rel="noopener noreferrer">
-                    <div class="quick-link-icon price-icon">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                    <div class="quick-link-content">
-                        <h3>Daftar Harga Lengkap</h3>
-                        <p>Cek layanan lengkap & harga terbaru</p>
-                    </div>
-                    <div class="quick-link-arrow">→</div>
-                </a>
-
-                <a href="https://maps.app.goo.gl/XKxUGKmyL2o1Hgac6" class="quick-link-card location-link" target="_blank" rel="noopener noreferrer">
-                    <div class="quick-link-icon location-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="quick-link-content">
-                        <h3>Lokasi Toko</h3>
-                        <p>Sebelah kanan Alluna Laundry Express</p>
-                    </div>
-                    <div class="quick-link-arrow">→</div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 ELService - TechRepair Professional Service. All Rights Reserved.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Service Gadget Terpercaya dengan Harga Pelajar</p>
-        <div class="footer-links">
-            <a href="#services">Layanan</a>
-            <a href="#pricing">Harga</a>
-            <a href="blog.html">Blog</a>
-            <a href="#contact">Kontak</a>
-            <a href="https://raysatyaa.github.io/kerja-sama/" target="_blank">Kerja Sama</a>
-        </div>
-    </footer>
-
-    <!-- WhatsApp Float Button -->
-    <div class="wa-float-btn" onclick="openModal()">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
+<!-- ====== CEK HARGA ====== -->
+<section id="cek-harga" class="section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div>Cek Harga<div class="eyebrow-line"></div></div>
+      <h2 class="section-heading">Pilih Jenis Perangkat</h2>
+      <p class="section-sub" style="margin-inline:auto">Pilih perangkat, lalu pilih sparepart untuk melihat estimasi harga</p>
     </div>
 
-    <!-- Modal Form -->
-    <div id="serviceModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>🛠️ Selamat Datang di ELService</h2>
-                <p>Silakan isi formulir di bawah untuk konsultasi gratis</p>
-            </div>
-            <div class="modal-body">
-                <form id="serviceForm">
-                    <div class="form-group">
-                        <label for="name">Nama Lengkap *</label>
-                        <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="address">Alamat <span class="optional-label">(Opsional)</span></label>
-                        <input type="text" id="address" name="address" placeholder="Masukkan alamat Anda">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="deviceType">Tipe HP/Gadget *</label>
-                        <input type="text" id="deviceType" name="deviceType" required placeholder="Contoh: iPhone 12, Samsung A52, Asus Vivobook">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="issue">Kendala / Kerusakan *</label>
-                        <textarea id="issue" name="issue" required placeholder="Jelaskan kerusakan atau masalah yang dialami gadget Anda"></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">
-                        💬 Kirim ke WhatsApp
-                    </button>
-                </form>
-            </div>
-        </div>
+    <!-- NOTICE -->
+    <div class="confirm-notice reveal">
+      <div class="notice-icon">📋</div>
+      <div class="notice-text">
+        <strong>Harga Bersifat Estimasi & Perlu Konfirmasi</strong>
+        <p>Ketersediaan sparepart <strong>tidak selalu ready</strong>. Setiap perbaikan akan dikonfirmasi terlebih dahulu via WhatsApp sebelum pengerjaan dimulai. Harga final ditentukan setelah diagnosa langsung.</p>
+      </div>
     </div>
 
-    <script>
-        function toggleMobileMenu() {
-            const nav = document.getElementById('mobileNav');
-            nav.classList.toggle('active');
-        }
+    <div class="device-grid reveal">
+      <div class="device-card" data-device="iphone" onclick="pickDevice('iphone',this)">
+        <span class="dc-emoji">📱</span>
+        <div class="dc-name">iPhone</div>
+        <div class="dc-sub">iPhone 6 — 16 Series</div>
+        <div class="dc-tag">Apple iOS</div>
+      </div>
+      <div class="device-card" data-device="android" onclick="pickDevice('android',this)">
+        <span class="dc-emoji">🤖</span>
+        <div class="dc-name">Android</div>
+        <div class="dc-sub">Samsung · Xiaomi · OPPO · dll</div>
+        <div class="dc-tag">All Brand</div>
+      </div>
+      <div class="device-card" data-device="laptop" onclick="pickDevice('laptop',this)">
+        <span class="dc-emoji">💻</span>
+        <div class="dc-name">Laptop</div>
+        <div class="dc-sub">Semua merk & seri</div>
+        <div class="dc-tag">All Brand</div>
+      </div>
+      <div class="device-card" data-device="pc" onclick="pickDevice('pc',this)">
+        <span class="dc-emoji">🖥️</span>
+        <div class="dc-name">PC / Komputer</div>
+        <div class="dc-sub">Desktop & All-in-One</div>
+        <div class="dc-tag">Custom & Brand</div>
+      </div>
+    </div>
 
-        function closeMobileMenu() {
-            const nav = document.getElementById('mobileNav');
-            nav.classList.remove('active');
-        }
+    <!-- SPAREPART -->
+    <div id="sp-section">
+      <div class="sp-header-row">
+        <h3>Pilih sparepart untuk <span id="sp-device-label">—</span>:</h3>
+      </div>
+      <div class="sp-grid" id="spGrid"></div>
 
-        function toggleDropdown(event) {
-            event.stopPropagation();
-            const dropdown = event.currentTarget.closest('.dropdown');
-            if (dropdown) {
-                dropdown.classList.toggle('active');
-            }
-        }
+      <!-- CONFIRM ALERT PER SPAREPART -->
+      <div class="sp-confirm-alert" id="spConfirmAlert" style="display:none">
+        <span>⚠️</span>
+        <span>Harga di bawah adalah <strong>estimasi</strong>. Ketersediaan stok & harga final akan <strong>dikonfirmasi via WhatsApp</strong> sebelum pengerjaan.</span>
+      </div>
 
-        // Close mobile menu and dropdowns when clicking outside
-        document.addEventListener('click', function(event) {
-            const nav = document.getElementById('mobileNav');
-            const toggle = document.querySelector('.mobile-menu-toggle');
-            
-            // Close mobile menu
-            if (nav && toggle && !nav.contains(event.target) && !toggle.contains(event.target)) {
-                nav.classList.remove('active');
-            }
+      <!-- PRICE TABLE -->
+      <div id="price-section">
+        <div class="price-toolbar">
+          <h3>Estimasi Harga — <span id="priceLabel">—</span></h3>
+          <div class="search-wrap">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input class="price-search" type="text" placeholder="Cari model..." id="searchInput" oninput="filterTable()">
+          </div>
+        </div>
 
-            // Close dropdowns
-            const dropdowns = document.querySelectorAll('.dropdown');
-            dropdowns.forEach(dropdown => {
-                if (!dropdown.contains(event.target)) {
-                    dropdown.classList.remove('active');
-                }
-            });
-        });
+        <div class="table-wrap">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Model / Tipe</th>
+                <th>Part</th>
+                <th>Kualitas</th>
+                <th>Est. Harga</th>
+                <th>Waktu</th>
+              </tr>
+            </thead>
+            <tbody id="priceBody"></tbody>
+          </table>
+          <div class="price-confirm-banner">
+            <div class="pcb-left">
+              <div class="pcb-icon">📞</div>
+              <div class="pcb-text">
+                <strong>Wajib konfirmasi sebelum pengerjaan</strong>
+                <p>Stok sparepart tidak selalu ready · Harga final setelah diagnosa</p>
+              </div>
+            </div>
+            <a class="btn-pcb" id="confirmWaBtn" href="#" target="_blank">Konfirmasi via WA →</a>
+          </div>
+        </div>
 
-        function openModal() {
-            document.getElementById('serviceModal').style.display = 'block';
-            document.body.style.overflow = 'hidden';
-            closeMobileMenu();
-        }
+        <div class="wa-strip">
+          <div class="wa-strip-left">
+            <div class="wa-strip-icon">💬</div>
+            <div>
+              <h4>Harga tidak ada atau ingin tanya lebih lanjut?</h4>
+              <p>Chat langsung & dapatkan info stok terbaru</p>
+            </div>
+          </div>
+          <a class="btn-wa" id="waAskBtn" href="#" target="_blank">WhatsApp Sekarang</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        function closeModal() {
-            document.getElementById('serviceModal').style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
+<!-- ====== CARA KERJA ====== -->
+<section id="cara-kerja" class="section section-alt">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div>Prosedur<div class="eyebrow-line"></div></div>
+      <h2 class="section-heading">Cara Kerja ElService</h2>
+      <p class="section-sub" style="margin-inline:auto">Simple, transparan, dan tidak ada kejutan biaya</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num-bg">01</div>
+        <div class="step-pill">Langkah 1</div>
+        <div class="step-icon-wrap" style="background:#f5f2ff">🔍</div>
+        <div class="step-title">Cek Harga / Konsultasi</div>
+        <div class="step-desc">Cek estimasi harga online atau konsultasi gratis via WhatsApp untuk mengetahui perkiraan biaya servis.</div>
+      </div>
+      <div class="step-card reveal reveal-delay1">
+        <div class="step-num-bg">02</div>
+        <div class="step-pill">Langkah 2</div>
+        <div class="step-icon-wrap" style="background:#fff4f0">📦</div>
+        <div class="step-title">Bawa / Kirim Gadget</div>
+        <div class="step-desc">Kunjungi toko kami langsung atau kirim gadget via ekspedisi terpercaya ke alamat kami di Bandung.</div>
+      </div>
+      <div class="step-card reveal reveal-delay2">
+        <div class="step-num-bg">03</div>
+        <div class="step-pill">Langkah 3</div>
+        <div class="step-icon-wrap" style="background:#e0fff6">✅</div>
+        <div class="step-title">Konfirmasi Harga & Stok</div>
+        <div class="step-desc">Kami diagnosa kerusakan & konfirmasi ketersediaan sparepart + harga final via WhatsApp sebelum mulai pengerjaan.</div>
+      </div>
+      <div class="step-card reveal reveal-delay3">
+        <div class="step-num-bg">04</div>
+        <div class="step-pill">Langkah 4</div>
+        <div class="step-icon-wrap" style="background:#e0f8ff">🛡️</div>
+        <div class="step-title">Selesai + Garansi 3 Bulan</div>
+        <div class="step-desc">Gadget dikembalikan dalam kondisi prima dengan garansi servis hingga 3 bulan. Tidak puas? Kami tangani!</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        window.onclick = function(event) {
-            const modal = document.getElementById('serviceModal');
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
+<!-- ====== KEUNGGULAN ====== -->
+<section id="keunggulan" class="section">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div>Kenapa Kami<div class="eyebrow-line"></div></div>
+      <h2 class="section-heading">Keunggulan ElService</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feat-card reveal" style="--fc-color:#6c3cf7;--fc-pale:#f5f2ff">
+        <div class="feat-icon-box">🔒</div>
+        <div>
+          <div class="feat-title">Sparepart Original & Compatible</div>
+          <div class="feat-desc">Tersedia pilihan sparepart original dan compatible berkualitas. Semua dikonfirmasi ketersediaan stoknya sebelum pengerjaan.</div>
+        </div>
+      </div>
+      <div class="feat-card reveal reveal-delay1" style="--fc-color:#06d6a0;--fc-pale:#e0fff6">
+        <div class="feat-icon-box">⚡</div>
+        <div>
+          <div class="feat-title">Servis Cepat & Tepat</div>
+          <div class="feat-desc">Beberapa kerusakan bisa selesai dalam 1–2 jam. Kami prioritaskan kecepatan tanpa mengorbankan kualitas.</div>
+        </div>
+      </div>
+      <div class="feat-card reveal" style="--fc-color:#ff6b35;--fc-pale:#fff4f0">
+        <div class="feat-icon-box">🛡️</div>
+        <div>
+          <div class="feat-title">Garansi Resmi 3 Bulan</div>
+          <div class="feat-desc">Setiap hasil servis dilindungi garansi. Jika ada masalah dalam masa garansi, kami tangani tanpa biaya tambahan.</div>
+        </div>
+      </div>
+      <div class="feat-card reveal reveal-delay1" style="--fc-color:#00c6ff;--fc-pale:#e0f8ff">
+        <div class="feat-icon-box">💰</div>
+        <div>
+          <div class="feat-title">Harga Transparan, No Tipu</div>
+          <div class="feat-desc">Tidak ada biaya tersembunyi. Harga dikonfirmasi dan disetujui customer sebelum pengerjaan dimulai.</div>
+        </div>
+      </div>
+      <div class="feat-card reveal" style="--fc-color:#f72585;--fc-pale:#ffe0f0">
+        <div class="feat-icon-box">👨‍🔧</div>
+        <div>
+          <div class="feat-title">Teknisi Berpengalaman</div>
+          <div class="feat-desc">Tim teknisi terlatih dengan jam terbang tinggi. Berpengalaman menangani berbagai jenis kerusakan dari yang ringan hingga berat.</div>
+        </div>
+      </div>
+      <div class="feat-card reveal reveal-delay1" style="--fc-color:#fbbf24;--fc-pale:#fffbeb">
+        <div class="feat-icon-box">📍</div>
+        <div>
+          <div class="feat-title">Pickup & Delivery Area Bandung</div>
+          <div class="feat-desc">Kami menyediakan layanan jemput dan antar gadget di area Bandung. Syarat & ketentuan berlaku — hubungi kami untuk info lebih lanjut.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        document.getElementById('serviceForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const address = document.getElementById('address').value;
-            const deviceType = document.getElementById('deviceType').value;
-            const issue = document.getElementById('issue').value;
-            
-            let message = `Halo, saya ingin konsultasi service gadget:%0A%0A`;
-            message += `*Nama:* ${encodeURIComponent(name)}%0A`;
-            if (address) {
-                message += `*Alamat:* ${encodeURIComponent(address)}%0A`;
-            }
-            message += `*Tipe Gadget:* ${encodeURIComponent(deviceType)}%0A`;
-            message += `*Kendala:* ${encodeURIComponent(issue)}`;
-            
-            const whatsappURL = `https://wa.me/6288802142498?text=${message}`;
-            window.open(whatsappURL, '_blank');
-            
-            closeModal();
-            document.getElementById('serviceForm').reset();
-        });
-    </script>
+<!-- ====== TESTIMONI ====== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div>Testimoni<div class="eyebrow-line"></div></div>
+      <h2 class="section-heading">Kata Pelanggan Kami</h2>
+    </div>
+    <div class="testi-grid reveal">
+      <div class="testi-track" id="testiTrack"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== LOKASI ====== -->
+<section id="lokasi" class="maps-section">
+  <div class="maps-inner">
+    <div class="maps-info reveal">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div>Lokasi Kami</div>
+      <h2>Temukan Kami di Bandung</h2>
+      <p>Kunjungi toko kami langsung untuk konsultasi, diagnosa gratis, atau langsung servis di tempat.</p>
+      <div class="maps-details">
+        <div class="maps-detail-row">
+          <div class="mdr-icon">📍</div>
+          <div><div class="mdr-label">Alamat</div><div class="mdr-val">Bandung, Jawa Barat</div></div>
+        </div>
+        <div class="maps-detail-row">
+          <div class="mdr-icon">🕐</div>
+          <div><div class="mdr-label">Jam Operasional</div><div class="mdr-val">Senin – Sabtu · 09.00 – 18.00 WIB</div></div>
+        </div>
+        <div class="maps-detail-row">
+          <div class="mdr-icon">📱</div>
+          <div><div class="mdr-label">WhatsApp</div><div class="mdr-val">+62 858-6204-7970</div></div>
+        </div>
+      </div>
+      <a class="btn-maps" href="https://www.google.com/maps/place/Alluna+Laundry+Express/@-6.46022,107.9447273,3a,75y,253.24h,89.86t/data=!3m7!1e1!3m5!1s96Px0CujFCLbZ_oeRFKBqQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0.14120549780419367%26panoid%3D96Px0CujFCLbZ_oeRFKBqQ%26yaw%3D253.2401962459555!7i16384!8i8192!4m10!1m2!2m1!1salluna+laundry!3m6!1s0x2e693736a6d9cba5:0xeb858f29a1b67e58!8m2!3d-6.4601469!4d107.9445456!15sCg5hbGx1bmEgbGF1bmRyeZIBD2xhdW5kcnlfc2VydmljZeABAA!16s%2Fg%2F11tg7twvgn?entry=ttu&g_ep=EgoyMDI2MDQwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+        📍 Buka di Google Maps
+      </a>
+    </div>
+    <div>
+      <div class="maps-frame reveal reveal-delay1">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.0!2d107.9447576!3d-6.4602575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMjcnMzcuMCJTIDEwN8KwNTYnNDEuMSJF!5e0!3m2!1sid!2sid!4v1700000000000"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Lokasi ElService Bandung">
+        </iframe>
+      </div>
+      <figure class="maps-photo-card reveal reveal-delay2">
+        <img
+          src="sebelah.png"
+          alt="Suasana service center ElService dengan teknisi melayani perbaikan gadget"
+          loading="lazy">
+        <figcaption>Dokumentasi area servis ElService agar pelanggan lebih detail melihat suasana tempat.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SEO KONTEN AREA ====== -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:30px">
+      <div class="section-eyebrow"><div class="eyebrow-line"></div>Layanan Area<div class="eyebrow-line"></div></div>
+      <h2 class="section-heading">Service Murah, Service Termurah, dan Service HP Terdekat</h2>
+      <p class="section-sub" style="margin-inline:auto;max-width:760px">
+        ElService fokus pada layanan <strong>service murah</strong> dengan kualitas kerja profesional. Untuk pencarian seperti
+        <strong>service termurah</strong>, <strong>service HP Haurgeulis</strong>, <strong>service HP Indramayu</strong>,
+        hingga service iPhone, Android, laptop, dan PC, kami siap bantu cepat dengan proses transparan.
+      </p>
+    </div>
+    <div class="seo-area-list reveal">
+      <div class="seo-area-item"><strong>Service HP Haurgeulis</strong><br>Perbaikan layar, baterai, charging, kamera, dan software.</div>
+      <div class="seo-area-item"><strong>Service HP Indramayu</strong><br>Konsultasi via WhatsApp, cek estimasi, lalu konfirmasi pengerjaan.</div>
+      <div class="seo-area-item"><strong>Service iPhone Murah</strong><br>Tersedia opsi original & compatible dengan estimasi waktu jelas.</div>
+      <div class="seo-area-item"><strong>Service Android Murah</strong><br>Samsung, Xiaomi, OPPO, Vivo, Realme dan brand lainnya.</div>
+      <div class="seo-area-item"><strong>Service Laptop Murah</strong><br>LCD, baterai, keyboard, charging, install OS, upgrade RAM/SSD.</div>
+      <div class="seo-area-item"><strong>Service PC Termurah</strong><br>Cleaning, thermal paste, PSU, troubleshooting, dan upgrade komponen.</div>
+    </div>
+    <p class="seo-notes reveal reveal-delay1">
+      Pencarian populer seperti <em>tempat service hp murah</em>, <em>jasa service hp termurah</em>, <em>service gadget terdekat</em>,
+      <em>service iPhone terpercaya</em>, dan <em>service Android cepat</em> mengarah pada kebutuhan yang sama: harga jelas, pengerjaan rapi,
+      dan komunikasi cepat. ElService mengutamakan ketiganya agar pelanggan dari Bandung, Haurgeulis, maupun Indramayu merasa aman.
+    </p>
+  </div>
+</section>
+
+<!-- ====== CTA BAND ====== -->
+<div class="cta-band reveal">
+  <h2>Konsultasi Dulu Yuk, Gratis! 💬</h2>
+  <p>Tim kami siap membantu diagnosa & konfirmasi ketersediaan sparepart gadget Anda</p>
+  <button class="btn-cta-wa" onclick="openModal()">
+    💬 Konsultasi via WhatsApp — Gratis
+  </button>
+</div>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="footer-top">
+    <div>
+      <div class="footer-brand-name">
+        <div class="fb-mark">
+          <img class="nav-logo-img" src="logo.png" alt="Logo ElService" loading="lazy">
+        </div>
+        ElService
+      </div>
+      <p class="footer-desc">Service gadget profesional di Bandung. Harga transparan, konfirmasi sebelum pengerjaan, garansi resmi 3 bulan.</p>
+      <div class="social-row">
+        <a class="social-link ig" href="https://instagram.com/elservicee.id" target="_blank" title="Instagram ElService">📸</a>
+        <a class="social-link tiktok" href="https://tiktok.com/@elservicee.id" target="_blank" title="TikTok ElService">🎵</a>
+        <a class="social-link wa" href="https://wa.me/6285862047970" target="_blank" title="WhatsApp">💬</a>
+        <a class="social-link maps" href="https://www.google.com/maps/@-6.4602575,107.9447576,3a,75y,265.98h,80.09t/data=!3m7!1e1!3m5!1shmZRkBK9d1PjM9n4Pl_TjQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D9.909149677960485%26panoid%3DhmZRkBK9d1PjM9n4Pl_TjQ%26yaw%3D265.98152586379865!7i16384!8i8192?entry=ttu" target="_blank" title="Google Maps">📍</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Layanan</h5>
+      <a href="#cek-harga" onclick="pickDevice('iphone',document.querySelector('[data-device=iphone]'));return true;">Service iPhone</a>
+      <a href="#cek-harga" onclick="pickDevice('android',document.querySelector('[data-device=android]'));return true;">Service Android</a>
+      <a href="#cek-harga" onclick="pickDevice('laptop',document.querySelector('[data-device=laptop]'));return true;">Service Laptop</a>
+      <a href="#cek-harga" onclick="pickDevice('pc',document.querySelector('[data-device=pc]'));return true;">Service PC</a>
+    </div>
+    <div class="footer-col">
+      <h5>Info</h5>
+      <a href="#cara-kerja">Cara Kerja</a>
+      <a href="#keunggulan">Keunggulan</a>
+      <a href="#lokasi">Lokasi</a>
+      <a href="#" onclick="openModal();return false;">Konsultasi</a>
+    </div>
+    <div class="footer-col">
+      <h5>Kontak</h5>
+      <a href="https://wa.me/6285862047970" target="_blank">📱 +62 858-6204-7970</a>
+      <a href="#lokasi">📍 Bandung, Jawa Barat</a>
+      <a href="#">🕐 Senin–Sabtu, 09.00–18.00</a>
+      <a href="https://instagram.com/elservicee.id" target="_blank">📸 Instagram</a>
+      <a href="https://tiktok.com/@elservicee.id" target="_blank">🎵 TikTok</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 ElService · Bandung. All rights reserved.</p>
+    <p style="font-size:.75rem;color:rgba(255,255,255,.25)">Harga bersifat estimasi & perlu konfirmasi</p>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a class="wa-float-btn" href="https://wa.me/628880214249" target="_blank" title="Chat WhatsApp">
+  💬
+  <div class="wa-float-pulse"></div>
+</a>
+
+<!-- ====== MODAL KONSULTASI ====== -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <div class="modal-top">
+      <button class="modal-close-btn" onclick="closeModal()">✕</button>
+      <h3>💬 Konsultasi Gratis</h3>
+      <p>Isi form ini & tim kami akan segera merespons via WhatsApp</p>
+    </div>
+    <div class="modal-body">
+      <div class="modal-notice">
+        <span class="modal-notice-icon">📋</span>
+        <span>Setelah menerima pesan, tim kami akan <strong>mengecek ketersediaan sparepart</strong> & memberikan <strong>konfirmasi harga final</strong> sebelum pengerjaan dimulai.</span>
+      </div>
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label">Nama Lengkap <span class="required">*</span></label>
+          <input class="form-input" id="f-nama" type="text" placeholder="Nama Anda">
+        </div>
+        <div class="form-group">
+          <label class="form-label">No. WhatsApp <span class="required">*</span></label>
+          <input class="form-input" id="f-wa" type="tel" placeholder="08xx-xxxx-xxxx">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Alamat / Kota</label>
+        <input class="form-input" id="f-alamat" type="text" placeholder="Contoh: Bandung, Cimahi, dll">
+      </div>
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label">Jenis Perangkat <span class="required">*</span></label>
+          <select class="form-select" id="f-device">
+            <option value="">— Pilih —</option>
+            <option>iPhone</option>
+            <option>Android</option>
+            <option>Laptop</option>
+            <option>PC / Komputer</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Tipe / Model</label>
+          <input class="form-input" id="f-tipe" type="text" placeholder="Contoh: iPhone 13, A52">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Deskripsi Kerusakan <span class="required">*</span></label>
+        <textarea class="form-textarea" id="f-masalah" placeholder="Ceritakan masalah gadget Anda... Contoh: LCD retak, tidak bisa charging, kamera buram, mati total, dll."></textarea>
+      </div>
+
+      <button class="btn-submit" onclick="kirimKonsultasi()">
+        <span>💬</span>
+        <span>
+          Kirim via WhatsApp
+          <span class="btn-submit-sub">Tim kami akan konfirmasi stok & harga sebelum pengerjaan</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ====== OPENING PROMO ====== -->
+<div class="promo-overlay" id="promoOverlay" onclick="if(event.target===this)closePromo()">
+  <div class="promo-box">
+    <div class="promo-head">
+      <button class="promo-close" onclick="closePromo()">✕</button>
+      <h3>🎉 Promo Opening ElService</h3>
+      <p>Diskon terbatas untuk pelanggan baru, langsung aktif saat website dibuka.</p>
+    </div>
+    <div class="promo-body">
+      <div class="promo-tag">Promo Hari Ini</div>
+      <div class="promo-list">
+        <div>💸 Potongan servis <strong>Rp 30.000</strong> untuk perbaikan ringan.</div>
+        <div>🔥 Potongan servis <strong>Rp 50.000</strong> untuk perbaikan tertentu (syarat berlaku).</div>
+        <div>📱 Info cepat: LCD Android rata-rata (non OLED / non fingerprint layar) mulai sekitar <strong>Rp 250.000</strong>.</div>
+      </div>
+      <div class="promo-actions">
+        <a class="btn-promo-primary" href="https://wa.me/628880214249?text=Halo%20ElService!%20Saya%20lihat%20promo%20opening%20diskon%2030rb/50rb.%20Boleh%20info%20detailnya%3F" target="_blank">Klaim Promo via WA</a>
+        <button class="btn-promo-secondary" onclick="closePromo()">Nanti Saja</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== SCRIPT ====== -->
+<script>
+/* ===== SEO STRUCTURED DATA ===== */
+const seoLdJson = {
+  "@context": "https://schema.org",
+  "@type": "MobilePhoneStore",
+  "name": "ElService",
+  "description": "Service gadget profesional dengan fokus service murah dan service termurah untuk HP, iPhone, Android, laptop, dan PC.",
+  "telephone": "+62 858-6204-7970",
+  "areaServed": [
+    "Bandung",
+    "Haurgeulis",
+    "Indramayu",
+    "Cimahi"
+  ],
+  "serviceType": [
+    "Service murah",
+    "Service termurah",
+    "Service HP Haurgeulis",
+    "Service HP Indramayu",
+    "Service iPhone murah",
+    "Service Android murah",
+    "Service laptop murah",
+    "Service PC murah"
+  ],
+  "url": window.location.href
+};
+const seoScript = document.createElement('script');
+seoScript.type = 'application/ld+json';
+seoScript.textContent = JSON.stringify(seoLdJson);
+document.head.appendChild(seoScript);
+
+/* ===== DATA HARGA ===== */
+const priceData = {
+  iphone: {
+    lcd:     [{model:'iPhone 6',part:'LCD Screen',q:'Compatible',price:'Rp 150.000',est:'30 mnt'},{model:'iPhone 6 Plus',part:'LCD Screen',q:'Compatible',price:'Rp 230.000',est:'30 mnt'},{model:'iPhone 6s',part:'LCD Screen',q:'Compatible',price:'Rp 220.000',est:'30 mnt'},{model:'iPhone 6s Plus',part:'LCD Screen',q:'Compatible',price:'Rp 250.000',est:'30 mnt'},{model:'iPhone 7',part:'LCD Screen',q:'Compatible',price:'Rp 250.000',est:'30 mnt'},{model:'iPhone 7 Plus',part:'LCD Screen',q:'Compatible',price:'Rp 300.000',est:'30 mnt'},{model:'iPhone 8',part:'LCD Screen',q:'Compatible',price:'Rp 280.000',est:'30 mnt'},{model:'iPhone 8 Plus',part:'LCD Screen',q:'Compatible',price:'Rp 320.000',est:'30 mnt'},{model:'iPhone X',part:'LCD Screen',q:'Compatible',price:'Rp 450.000',est:'45 mnt'},{model:'iPhone XR',part:'LCD Screen',q:'Compatible',price:'Rp 450.000',est:'45 mnt'},{model:'iPhone XS',part:'LCD Screen',q:'Compatible',price:'Rp 450.000',est:'45 mnt'},{model:'iPhone XS Max',part:'LCD Screen',q:'Compatible',price:'Rp 600.000',est:'45 mnt'},{model:'iPhone 11',part:'LCD Screen',q:'Compatible',price:'Rp 450.000',est:'45 mnt'},{model:'iPhone 11 Pro',part:'LCD Screen',q:'Compatible',price:'Rp 620.000',est:'45 mnt'},{model:'iPhone 11 Pro Max',part:'LCD Screen',q:'Compatible',price:'Rp 550.000',est:'45 mnt'},{model:'iPhone 12 Mini',part:'LCD Screen',q:'Compatible',price:'Rp 650.000',est:'30 mnt'},{model:'iPhone 12',part:'LCD Screen',q:'Compatible',price:'Rp 500.000',est:'30 mnt'},{model:'iPhone 12 Pro',part:'LCD Screen',q:'Compatible',price:'Rp 650.000',est:'30 mnt'},{model:'iPhone 12 Pro Max',part:'LCD Screen',q:'Compatible',price:'Rp 850.000',est:'30 mnt'},{model:'iPhone 13',part:'LCD Screen',q:'Compatible',price:'Rp 700.000',est:'30 mnt'},{model:'iPhone 13 Mini',part:'LCD Screen',q:'Compatible',price:'Rp 850.000',est:'30 mnt'},{model:'iPhone 13 Pro',part:'LCD Screen',q:'Compatible',price:'Rp 950.000',est:'30 mnt'},{model:'iPhone 13 Pro Max',part:'LCD Screen',q:'Compatible',price:'Rp 1.150.000',est:'30 mnt'},{model:'iPhone 14',part:'LCD Screen',q:'Compatible',price:'Rp 800.000',est:'30 mnt'},{model:'iPhone 14 Plus',part:'LCD Screen',q:'Compatible',price:'Rp 950.000',est:'30 mnt'},{model:'iPhone 14 Pro',part:'LCD Screen',q:'Compatible',price:'Rp 1.000.000',est:'30 mnt'},{model:'iPhone 14 Pro Max',part:'LCD Screen',q:'Compatible',price:'Rp 1.250.000',est:'30 mnt'},{model:'iPhone 15',part:'LCD Screen',q:'Compatible',price:'Rp 900.000',est:'30 mnt'},{model:'iPhone 15 Plus',part:'LCD Screen',q:'Compatible',price:'Rp 1.150.000',est:'30 mnt'},{model:'iPhone 15 Pro',part:'LCD Screen',q:'Compatible',price:'Rp 1.450.000',est:'30 mnt'},{model:'iPhone 15 Pro Max',part:'LCD Screen',q:'Compatible',price:'Rp 1.550.000',est:'30 mnt'}],
+    baterai: [{model:'iPhone 6',part:'Baterai',q:'Compatible',price:'Rp 150.000',est:'20 mnt'},{model:'iPhone 6 Plus',part:'Baterai',q:'Compatible',price:'Rp 170.000',est:'20 mnt'},{model:'iPhone 6s',part:'Baterai',q:'Compatible',price:'Rp 170.000',est:'20 mnt'},{model:'iPhone 6s Plus',part:'Baterai',q:'Compatible',price:'Rp 175.000',est:'20 mnt'},{model:'iPhone 7',part:'Baterai',q:'Compatible',price:'Rp 200.000',est:'20 mnt'},{model:'iPhone 7 Plus',part:'Baterai',q:'Compatible',price:'Rp 230.000',est:'20 mnt'},{model:'iPhone 8',part:'Baterai',q:'Compatible',price:'Rp 220.000',est:'20 mnt'},{model:'iPhone 8 Plus',part:'Baterai',q:'Compatible',price:'Rp 240.000',est:'20 mnt'},{model:'iPhone X',part:'Baterai',q:'Compatible',price:'Rp 350.000',est:'25 mnt'},{model:'iPhone XR',part:'Baterai',q:'Compatible',price:'Rp 350.000',est:'25 mnt'},{model:'iPhone XS',part:'Baterai',q:'Compatible',price:'Rp 350.000',est:'25 mnt'},{model:'iPhone XS Max',part:'Baterai',q:'Compatible',price:'Rp 350.000',est:'25 mnt'},{model:'iPhone 11',part:'Baterai',q:'Compatible',price:'Rp 350.000',est:'25 mnt'},{model:'iPhone 11 Pro',part:'Baterai',q:'Compatible',price:'Rp 360.000',est:'25 mnt'},{model:'iPhone 11 Pro Max',part:'Baterai',q:'Compatible',price:'Rp 375.000',est:'25 mnt'},{model:'iPhone 12 Mini',part:'Baterai',q:'Compatible',price:'Rp 380.000',est:'25 mnt'},{model:'iPhone 12',part:'Baterai',q:'Compatible',price:'Rp 400.000',est:'25 mnt'},{model:'iPhone 12 Pro',part:'Baterai',q:'Compatible',price:'Rp 400.000',est:'25 mnt'},{model:'iPhone 12 Pro Max',part:'Baterai',q:'Compatible',price:'Rp 420.000',est:'25 mnt'},{model:'iPhone 13',part:'Baterai',q:'Compatible',price:'Rp 460.000',est:'25 mnt'},{model:'iPhone 13 Mini',part:'Baterai',q:'Compatible',price:'Rp 420.000',est:'25 mnt'},{model:'iPhone 13 Pro',part:'Baterai',q:'Compatible',price:'Rp 480.000',est:'25 mnt'},{model:'iPhone 13 Pro Max',part:'Baterai',q:'Compatible',price:'Rp 500.000',est:'25 mnt'},{model:'iPhone 14',part:'Baterai',q:'Compatible',price:'Rp 520.000',est:'25 mnt'},{model:'iPhone 14 Plus',part:'Baterai',q:'Compatible',price:'Rp 550.000',est:'25 mnt'},{model:'iPhone 14 Pro',part:'Baterai',q:'Compatible',price:'Rp 580.000',est:'25 mnt'},{model:'iPhone 14 Pro Max',part:'Baterai',q:'Compatible',price:'Rp 600.000',est:'25 mnt'},{model:'iPhone 15',part:'Baterai',q:'Compatible',price:'Rp 700.000',est:'25 mnt'},{model:'iPhone 15 Plus',part:'Baterai',q:'Compatible',price:'Rp 800.000',est:'25 mnt'},{model:'iPhone 15 Pro',part:'Baterai',q:'Compatible',price:'Rp 850.000',est:'25 mnt'},{model:'iPhone 15 Pro Max',part:'Baterai',q:'Compatible',price:'Rp 1.000.000',est:'25 mnt'}],
+    kamera_depan: [{model:'iPhone 6',part:'Kamera Depan',q:'Compatible',price:'Rp 50.000',est:'30 mnt'},{model:'iPhone 6 Plus',part:'Kamera Depan',q:'Compatible',price:'Rp 50.000',est:'30 mnt'},{model:'iPhone 6s',part:'Kamera Depan',q:'Compatible',price:'Rp 50.000',est:'30 mnt'},{model:'iPhone 6s Plus',part:'Kamera Depan',q:'Compatible',price:'Rp 100.000',est:'30 mnt'},{model:'iPhone 7',part:'Kamera Depan',q:'Compatible',price:'Rp 130.000',est:'30 mnt'},{model:'iPhone 7 Plus',part:'Kamera Depan',q:'Compatible',price:'Rp 140.000',est:'30 mnt'},{model:'iPhone 8',part:'Kamera Depan',q:'Compatible',price:'Rp 145.000',est:'30 mnt'},{model:'iPhone 8 Plus',part:'Kamera Depan',q:'Compatible',price:'Rp 160.000',est:'30 mnt'},{model:'iPhone X',part:'Kamera Depan',q:'Compatible',price:'Rp 150.000',est:'30 mnt'},{model:'iPhone XR',part:'Kamera Depan',q:'Compatible',price:'Rp 150.000',est:'30 mnt'},{model:'iPhone XS',part:'Kamera Depan',q:'Compatible',price:'Rp 170.000',est:'30 mnt'},{model:'iPhone XS Max',part:'Kamera Depan',q:'Compatible',price:'Rp 230.000',est:'30 mnt'},{model:'iPhone 11',part:'Kamera Depan',q:'Compatible',price:'Rp 240.000',est:'30 mnt'},{model:'iPhone 11 Pro',part:'Kamera Depan',q:'Compatible',price:'Rp 250.000',est:'30 mnt'},{model:'iPhone 11 Pro Max',part:'Kamera Depan',q:'Compatible',price:'Rp 250.000',est:'30 mnt'},{model:'iPhone 12 Mini',part:'Kamera Depan',q:'Compatible',price:'Rp 170.000',est:'30 mnt'},{model:'iPhone 12',part:'Kamera Depan',q:'Compatible',price:'Rp 190.000',est:'30 mnt'},{model:'iPhone 12 Pro',part:'Kamera Depan',q:'Compatible',price:'Rp 200.000',est:'30 mnt'},{model:'iPhone 12 Pro Max',part:'Kamera Depan',q:'Compatible',price:'Rp 200.000',est:'30 mnt'},{model:'iPhone 13',part:'Kamera Depan',q:'Compatible',price:'Rp 220.000',est:'30 mnt'},{model:'iPhone 13 Mini',part:'Kamera Depan',q:'Compatible',price:'Rp 220.000',est:'30 mnt'},{model:'iPhone 13 Pro',part:'Kamera Depan',q:'Compatible',price:'Rp 230.000',est:'30 mnt'},{model:'iPhone 13 Pro Max',part:'Kamera Depan',q:'Compatible',price:'Rp 230.000',est:'30 mnt'},{model:'iPhone 14',part:'Kamera Depan',q:'Compatible',price:'Rp 550.000',est:'30 mnt'},{model:'iPhone 14 Plus',part:'Kamera Depan',q:'Compatible',price:'Rp 550.000',est:'30 mnt'},{model:'iPhone 14 Pro',part:'Kamera Depan',q:'Compatible',price:'Rp 550.000',est:'30 mnt'},{model:'iPhone 14 Pro Max',part:'Kamera Depan',q:'Compatible',price:'Rp 550.000',est:'30 mnt'},{model:'iPhone 15',part:'Kamera Depan',q:'Compatible',price:'Rp 750.000',est:'30 mnt'},{model:'iPhone 15 Plus',part:'Kamera Depan',q:'Compatible',price:'Rp 750.000',est:'30 mnt'},{model:'iPhone 15 Pro',part:'Kamera Depan',q:'Compatible',price:'Rp 750.000',est:'30 mnt'},{model:'iPhone 15 Pro Max',part:'Kamera Depan',q:'Compatible',price:'Rp 850.000',est:'30 mnt'}],
+    kamera_belakang: [{model:'iPhone 6',part:'Kamera Belakang',q:'Compatible',price:'Rp 100.000',est:'45 mnt'},{model:'iPhone 6 Plus',part:'Kamera Belakang',q:'Compatible',price:'Rp 100.000',est:'45 mnt'},{model:'iPhone 6s',part:'Kamera Belakang',q:'Compatible',price:'Rp 150.000',est:'45 mnt'},{model:'iPhone 6s Plus',part:'Kamera Belakang',q:'Compatible',price:'Rp 150.000',est:'45 mnt'},{model:'iPhone 7',part:'Kamera Belakang',q:'Compatible',price:'Rp 150.000',est:'45 mnt'},{model:'iPhone 7 Plus',part:'Kamera Belakang',q:'Compatible',price:'Rp 300.000',est:'45 mnt'},{model:'iPhone 8',part:'Kamera Belakang',q:'Compatible',price:'Rp 230.000',est:'45 mnt'},{model:'iPhone 8 Plus',part:'Kamera Belakang',q:'Compatible',price:'Rp 350.000',est:'45 mnt'},{model:'iPhone X',part:'Kamera Belakang',q:'Compatible',price:'Rp 350.000',est:'45 mnt'},{model:'iPhone XR',part:'Kamera Belakang',q:'Compatible',price:'Rp 350.000',est:'45 mnt'},{model:'iPhone XS',part:'Kamera Belakang',q:'Compatible',price:'Rp 350.000',est:'45 mnt'},{model:'iPhone XS Max',part:'Kamera Belakang',q:'Compatible',price:'Rp 450.000',est:'45 mnt'},{model:'iPhone 11',part:'Kamera Belakang',q:'Compatible',price:'Rp  420.000',est:'45 mnt'},{model:'iPhone 11 Pro',part:'Kamera Belakang',q:'Compatible',price:'Rp 550.000',est:'45 mnt'},{model:'iPhone 11 Pro Max',part:'Kamera Belakang',q:'Compatible',price:'Rp 550.000',est:'45 mnt'},{model:'iPhone 12 Mini',part:'Kamera Belakang',q:'Compatible',price:'Rp 500.000',est:'45 mnt'},{model:'iPhone 12',part:'Kamera Belakang',q:'Compatible',price:'Rp 480.000',est:'45 mnt'},{model:'iPhone 12 Pro',part:'Kamera Belakang',q:'Compatible',price:'Rp 950.000',est:'45 mnt'},{model:'iPhone 12 Pro Max',part:'Kamera Belakang',q:'Compatible',price:'Rp 850.000',est:'45 mnt'},{model:'iPhone 13',part:'Kamera Belakang',q:'Compatible',price:'Rp 490.000',est:'45 mnt'},{model:'iPhone 13 Mini',part:'Kamera Belakang',q:'Compatible',price:'Rp 490.000',est:'45 mnt'},{model:'iPhone 13 Pro',part:'Kamera Belakang',q:'Compatible',price:'Rp 1.000.000',est:'45 mnt'},{model:'iPhone 13 Pro Max',part:'Kamera Belakang',q:'Compatible',price:'Rp 1.000.000',est:'45 mnt'},{model:'iPhone 14',part:'Kamera Belakang',q:'Compatible',price:'Rp 700.000',est:'45 mnt'},{model:'iPhone 14 Plus',part:'Kamera Belakang',q:'Compatible',price:'Rp 850.000',est:'45 mnt'},{model:'iPhone 14 Pro',part:'Kamera Belakang',q:'Compatible',price:'Rp 1.050.000',est:'45 mnt'},{model:'iPhone 14 Pro Max',part:'Kamera Belakang',q:'Compatible',price:'Rp 1.050.000',est:'45 mnt'},{model:'iPhone 15',part:'Kamera Belakang',q:'Compatible',price:'Rp 700.000',est:'45 mnt'},{model:'iPhone 15 Plus',part:'Kamera Belakang',q:'Compatible',price:'Rp 850.000',est:'45 mnt'},{model:'iPhone 15 Pro',part:'Kamera Belakang',q:'Compatible',price:'Rp 1.100.000',est:'45 mnt'},{model:'iPhone 15 Pro Max',part:'Kamera Belakang',q:'Compatible',price:'Rp 1.200.000',est:'45 mnt'}],
+    housing: [{model:'iPhone 6 / 7 / 8',part:'Back Housing',q:'Compatible',price:'Rp 250.000',est:'30 mnt'},{model:'iPhone X / XR',part:'Back Housing',q:'Compatible',price:'Rp 400.000',est:'30 mnt'},{model:'iPhone 11 / 12 / 13',part:'Back Housing',q:'Compatible',price:'Rp 450.000',est:'30 mnt'}],
+    speaker: [{model:'iPhone 6–8',part:'Speaker Earpiece',q:'Compatible',price:'Rp 65.000',est:'20 mnt'},{model:'iPhone 6–8',part:'Speaker Bottom',q:'Compatible',price:'Rp 75.000',est:'20 mnt'},{model:'iPhone X–12',part:'Speaker Earpiece',q:'Compatible',price:'Rp 95.000',est:'20 mnt'},{model:'iPhone X–12',part:'Speaker Bottom',q:'Compatible',price:'Rp 110.000',est:'20 mnt'}],
+    charging:[{model:'iPhone 6–8 (Lightning)',part:'Flexibel Charging Port',q:'Compatible',price:'Rp 80.000',est:'25 mnt'},{model:'iPhone X–12',part:'Flexibel Charging Port',q:'Compatible',price:'Rp 120.000',est:'25 mnt'},{model:'iPhone 15+ (USB-C)',part:'Flexibel Charging Port',q:'Compatible',price:'Rp 250.000',est:'30 mnt'}],
+  },
+  android: {
+    lcd:     [{model:'Samsung A02s / A03s',part:'LCD + Touchscreen',q:'Compatible',price:'Rp 155.000',est:'45 mnt'},{model:'Samsung A32 4G',part:'AMOLED',q:'Compatible',price:'Rp 260.000',est:'45 mnt'},{model:'Samsung A52 / A53',part:'Super AMOLED',q:'Compatible',price:'Rp 310.000',est:'45 mnt'},{model:'Samsung A72',part:'Super AMOLED',q:'Compatible',price:'Rp 340.000',est:'45 mnt'},{model:'Samsung S21 / S22',part:'Dynamic AMOLED',q:'Compatible',price:'Rp 650.000',est:'30 mnt'},{model:'Xiaomi Redmi 9 / 10',part:'LCD',q:'Compatible',price:'Rp 175.000',est:'45 mnt'},{model:'Xiaomi Redmi Note 10',part:'AMOLED',q:'Compatible',price:'Rp 220.000',est:'45 mnt'},{model:'Xiaomi Redmi Note 11',part:'AMOLED',q:'Compatible',price:'Rp 240.000',est:'45 mnt'},{model:'OPPO A Series',part:'LCD',q:'Compatible',price:'Rp 180.000',est:'45 mnt'},{model:'OPPO Reno Series',part:'AMOLED',q:'Compatible',price:'Rp 280.000',est:'45 mnt'},{model:'Realme C Series',part:'LCD',q:'Compatible',price:'Rp 160.000',est:'45 mnt'},{model:'Vivo Y Series',part:'LCD',q:'Compatible',price:'Rp 170.000',est:'45 mnt'}],
+    baterai: [{model:'Samsung A Series',part:'Baterai',q:'Compatible',price:'Rp 85.000',est:'20 mnt'},{model:'Samsung S Series',part:'Baterai',q:'Compatible',price:'Rp 120.000',est:'20 mnt'},{model:'Xiaomi / Redmi',part:'Baterai',q:'Compatible',price:'Rp 85.000',est:'20 mnt'},{model:'OPPO / Realme',part:'Baterai',q:'Compatible',price:'Rp 90.000',est:'20 mnt'},{model:'Vivo',part:'Baterai',q:'Compatible',price:'Rp 88.000',est:'20 mnt'}],
+    kamera:  [{model:'Samsung A Series',part:'Kamera Belakang',q:'Compatible',price:'Rp 195.000',est:'45 mnt'},{model:'Samsung S Series',part:'Kamera Belakang',q:'Compatible',price:'Rp 380.000',est:'30 mnt'},{model:'Xiaomi / Redmi',part:'Kamera Belakang',q:'Compatible',price:'Rp 160.000',est:'45 mnt'},{model:'Semua Brand',part:'Kamera Depan',q:'Compatible',price:'Rp 90.000',est:'30 mnt'}],
+    housing: [{model:'Samsung A Series',part:'Back Cover',q:'Compatible',price:'Rp 75.000',est:'20 mnt'},{model:'Xiaomi / Redmi',part:'Back Cover',q:'Compatible',price:'Rp 70.000',est:'20 mnt'},{model:'OPPO / Realme',part:'Back Cover',q:'Compatible',price:'Rp 80.000',est:'20 mnt'}],
+    speaker: [{model:'Semua Brand Android',part:'Speaker / Earpiece',q:'Compatible',price:'Rp 65.000',est:'20 mnt'}],
+    charging:[{model:'Micro USB',part:'Port Charging',q:'Compatible',price:'Rp 60.000',est:'20 mnt'},{model:'USB-C',part:'Port Charging',q:'Compatible',price:'Rp 80.000',est:'20 mnt'}],
+  },
+  laptop: {
+    lcd:     [{model:'Laptop 14" HD',part:'LCD Panel',q:'Compatible',price:'Rp 600.000',est:'1.5 jam'},{model:'Laptop 14" FHD',part:'LCD Panel',q:'Compatible',price:'Rp 650.000',est:'1.5 jam'},{model:'Laptop 15.6" FHD',part:'LCD Panel',q:'Compatible',price:'Rp 750.000',est:'1.5 jam'},{model:'Laptop 13" (MacBook Air)',part:'Retina LCD',q:'Compatible',price:'Rp 1.500.000',est:'2 jam'},{model:'Laptop Gaming 144Hz',part:'IPS LCD 144Hz',q:'Compatible',price:'Rp 1.200.000',est:'2 jam'}],
+    baterai: [{model:'Laptop Umum 6 Cell',part:'Baterai',q:'Compatible',price:'Rp 250.000',est:'30 mnt'},{model:'Laptop Umum 9 Cell',part:'Baterai',q:'Compatible',price:'Rp 320.000',est:'30 mnt'},{model:'MacBook Air/Pro',part:'Baterai',q:'Compatible',price:'Rp 850.000',est:'30 mnt'}],
+    kamera:  [{model:'Semua Laptop',part:'Webcam Internal',q:'Compatible',price:'Rp 120.000',est:'30 mnt'}],
+    housing: [{model:'Laptop (LCD Cover)',part:'Casing Atas',q:'Compatible',price:'Rp 280.000',est:'30 mnt'},{model:'Laptop (Base)',part:'Casing Bawah',q:'Compatible',price:'Rp 250.000',est:'45 mnt'},{model:'Semua Laptop',part:'Keyboard Replacement',q:'Compatible',price:'Rp 200.000',est:'30 mnt'}],
+    speaker: [{model:'Semua Laptop',part:'Speaker Internal',q:'Compatible',price:'Rp 95.000',est:'30 mnt'}],
+    charging:[{model:'Adaptor Universal 65W',part:'Charger / Adaptor',q:'New',price:'Rp 175.000',est:'—'},{model:'Konektor DC Laptop',part:'DC Jack Port',q:'Compatible',price:'Rp 120.000',est:'30 mnt'}],
+    lainnya: [{model:'Semua Laptop',part:'Thermal Paste + Cleaning',q:'Servis',price:'Rp 75.000',est:'30 mnt'},{model:'Semua Laptop',part:'Upgrade RAM (Jasa)',q:'Servis',price:'Rp 50.000',est:'20 mnt'},{model:'Semua Laptop',part:'Install SSD (Jasa)',q:'Servis',price:'Rp 75.000',est:'30 mnt'},{model:'Semua Laptop',part:'Install OS Windows 11',q:'Servis',price:'Rp 100.000',est:'1.5 jam'}],
+  },
+  pc: {
+    lcd:     [{model:'Monitor 21.5" FHD',part:'LCD Panel',q:'Compatible',price:'Rp 550.000',est:'30 mnt'},{model:'Monitor 24" FHD',part:'LCD Panel',q:'Compatible',price:'Rp 700.000',est:'30 mnt'},{model:'Monitor 27" QHD',part:'LCD Panel',q:'Compatible',price:'Rp 1.000.000',est:'30 mnt'}],
+    baterai: [{model:'PC Desktop',part:'Baterai CMOS',q:'Original',price:'Rp 25.000',est:'10 mnt'}],
+    kamera:  [{model:'PC / All-in-One',part:'Webcam Eksternal',q:'New',price:'Rp 120.000',est:'—'}],
+    housing: [{model:'PC Tower',part:'Casing PC',q:'New',price:'Mulai Rp 250.000',est:'—'}],
+    speaker: [{model:'PC Desktop',part:'Speaker PC',q:'New',price:'Mulai Rp 80.000',est:'—'}],
+    charging:[{model:'PC Desktop',part:'Power Supply 500W',q:'New',price:'Rp 350.000',est:'30 mnt'},{model:'PC Desktop',part:'Power Supply 650W',q:'New',price:'Rp 480.000',est:'30 mnt'}],
+    lainnya: [{model:'Semua PC',part:'Cleaning + Thermal Paste',q:'Servis',price:'Rp 85.000',est:'30 mnt'},{model:'Semua PC',part:'Install Windows 11',q:'Servis',price:'Rp 100.000',est:'1.5 jam'},{model:'Semua PC',part:'Upgrade RAM (Jasa)',q:'Servis',price:'Rp 50.000',est:'20 mnt'},{model:'Semua PC',part:'Pasang SSD / HDD',q:'Servis',price:'Rp 75.000',est:'30 mnt'},{model:'Semua PC',part:'Troubleshooting Software',q:'Servis',price:'Rp 100.000',est:'30 mnt'}],
+  },
+};
+
+const spMeta = {
+  lcd:     {icon:'🖥️', label:'LCD / Layar'},
+  baterai: {icon:'🔋', label:'Baterai'},
+  kamera:  {icon:'📷', label:'Kamera'},
+  kamera_depan: {icon:'🤳', label:'Kamera Depan'},
+  kamera_belakang: {icon:'📸', label:'Kamera Belakang'},
+  housing: {icon:'🛡️', label:'Casing / Housing'},
+  speaker: {icon:'🔊', label:'Speaker'},
+  charging:{icon:'⚡', label:'Charging Port'},
+  lainnya: {icon:'🔩', label:'Lainnya / Jasa'},
+};
+
+const deviceNames = {iphone:'iPhone', android:'Android', laptop:'Laptop', pc:'PC / Komputer'};
+
+let curDevice = null, curSp = null, allRows = [];
+
+/* ===== DEVICE PICK ===== */
+function pickDevice(d, card) {
+  curDevice = d; curSp = null;
+  document.querySelectorAll('.device-card').forEach(c => c.classList.remove('active'));
+  if (card) card.classList.add('active');
+  else document.querySelector(`[data-device="${d}"]`)?.classList.add('active');
+
+  const parts = Object.keys(priceData[d]);
+  const grid = document.getElementById('spGrid');
+  grid.innerHTML = parts.map(p => {
+    const m = spMeta[p] || {icon:'🔧', label: p};
+    return `<div class="sp-chip" onclick="pickSp('${p}',this)">
+      <span class="sp-chip-icon">${m.icon}</span>
+      <div class="sp-chip-label">${m.label}</div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('sp-device-label').textContent = deviceNames[d];
+  document.getElementById('sp-section').classList.add('visible');
+  document.getElementById('price-section').style.display = 'none';
+  document.getElementById('spConfirmAlert').style.display = 'none';
+
+  setTimeout(() => {
+    document.getElementById('sp-section').scrollIntoView({behavior:'smooth', block:'start'});
+  }, 80);
+}
+
+/* ===== SPAREPART PICK ===== */
+function pickSp(sp, card) {
+  curSp = sp;
+  document.querySelectorAll('.sp-chip').forEach(c => c.classList.remove('active'));
+  card.classList.add('active');
+
+  allRows = priceData[curDevice][sp] || [];
+  renderRows(allRows);
+  document.getElementById('searchInput').value = '';
+
+  const m = spMeta[sp] || {label: sp};
+  document.getElementById('priceLabel').textContent = `${m.label} · ${deviceNames[curDevice]}`;
+
+  // WA buttons
+  const waMsg = `Halo ElService! 👋\nSaya ingin tanya estimasi & ketersediaan *${m.label}* untuk *${deviceNames[curDevice]}*.\nMohon infonya ya 🙏`;
+  const waUrl = `https://wa.me/628880214249?text=${encodeURIComponent(waMsg)}`;
+  document.getElementById('waAskBtn').href = waUrl;
+  document.getElementById('confirmWaBtn').href = waUrl;
+
+  document.getElementById('price-section').style.display = 'block';
+  document.getElementById('spConfirmAlert').style.display = 'flex';
+
+  setTimeout(() => {
+    document.getElementById('price-section').scrollIntoView({behavior:'smooth', block:'start'});
+  }, 80);
+}
+
+/* ===== RENDER TABLE ===== */
+function qClass(q) {
+  return q === 'Original' ? 'q-ori' : q === 'New' ? 'q-new' : q === 'Servis' ? 'q-srv' : 'q-com';
+}
+function renderRows(rows) {
+  const b = document.getElementById('priceBody');
+  if (!rows.length) {
+    b.innerHTML = `<tr class="price-empty-row"><td colspan="5">Data tidak ditemukan. <a href="#" onclick="openModal();return false;" style="color:var(--violet);font-weight:700">Konsultasi langsung →</a></td></tr>`;
+    return;
+  }
+  b.innerHTML = rows.map(r => `<tr>
+    <td class="td-model" data-label="Model / Tipe">${r.model}</td>
+    <td class="td-part" data-label="Part">${r.part}</td>
+    <td data-label="Kualitas"><span class="quality-badge ${qClass(r.q)}">${r.q}</span></td>
+    <td class="td-price" data-label="Est. Harga">${r.price}</td>
+    <td class="td-est" data-label="Waktu">${r.est}</td>
+  </tr>`).join('');
+}
+function filterTable() {
+  const q = document.getElementById('searchInput').value.toLowerCase();
+  renderRows(allRows.filter(r => r.model.toLowerCase().includes(q) || r.part.toLowerCase().includes(q)));
+}
+
+/* ===== MODAL ===== */
+function openModal() { document.getElementById('modalOverlay').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeModal() { document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow=''; }
+
+function kirimKonsultasi() {
+  const nama = document.getElementById('f-nama').value.trim();
+  const wa = document.getElementById('f-wa').value.trim();
+  const alamat = document.getElementById('f-alamat').value.trim();
+  const device = document.getElementById('f-device').value;
+  const tipe = document.getElementById('f-tipe').value.trim();
+  const masalah = document.getElementById('f-masalah').value.trim();
+  if (!nama || !wa || !device || !masalah) { alert('Mohon lengkapi field yang wajib diisi (bertanda *).'); return; }
+  const msg = `Halo ElService! 👋\n\n*FORM KONSULTASI*\n────────────────\n*Nama:* ${nama}\n*No. WA:* ${wa}\n*Alamat:* ${alamat || '-'}\n*Perangkat:* ${device}\n*Tipe/Model:* ${tipe || '-'}\n*Kerusakan:*\n${masalah}\n────────────────\nMohon bantu cek ketersediaan sparepart & estimasi harga ya 🙏`;
+  window.open(`https://wa.me/628880214249?text=${encodeURIComponent(msg)}`, '_blank');
+  closeModal();
+}
+
+/* ===== NAV ===== */
+function toggleNav() {
+  const h = document.getElementById('hamburger');
+  const n = document.getElementById('navLinks');
+  h.classList.toggle('open');
+  n.classList.toggle('open');
+}
+
+window.addEventListener('scroll', () => {
+  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+/* ===== REVEAL ===== */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+/* ===== THEME TOGGLE ===== */
+function applyTheme(mode) {
+  const btn = document.getElementById('themeToggleBtn');
+  const isDark = mode === 'dark';
+  document.body.classList.toggle('dark-mode', isDark);
+  if (btn) btn.textContent = isDark ? 'Mode Terang' : 'Mode Gelap';
+  localStorage.setItem('themeMode', mode);
+}
+function toggleTheme() {
+  const next = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+  applyTheme(next);
+}
+
+/* ===== TESTIMONI AUTO SLIDE (50 ITEM) ===== */
+const testiSeeds = [
+  {name:'Rizky A.', loc:'Bandung Kota', quote:'LCD iPhone saya diganti cepat, harga jelas, dan pengerjaan rapi banget.'},
+  {name:'Dian S.', loc:'Cimahi', quote:'Laptop mati total bisa nyala lagi. Dijelasin detail sebelum dikerjakan.'},
+  {name:'Farhan M.', loc:'Ujungberung', quote:'Harga sparepart transparan, ada konfirmasi dulu. Pelayanannya mantap.'},
+  {name:'Nadia P.', loc:'Antapani', quote:'Baterai Android boros, setelah servis jadi normal lagi. Recommended!'},
+  {name:'Yusuf K.', loc:'Kopo', quote:'Kamera belakang blur, sekarang jernih lagi. Prosesnya juga cepat.'},
+  {name:'Mira L.', loc:'Majalaya', quote:'Admin responsif, teknisi komunikatif, jadi tenang nunggu hasil servis.'},
+  {name:'Raka D.', loc:'Haurgeulis', quote:'Datang dari luar kota, hasil servis sesuai ekspektasi dan ada garansi.'},
+  {name:'Salsa N.', loc:'Indramayu', quote:'Penggantian charging port aman, data tetap aman, dan harga masuk akal.'},
+  {name:'Bima T.', loc:'Buah Batu', quote:'Sebelum bongkar, dikasih estimasi dulu. Ga ada biaya mendadak.'},
+  {name:'Aulia R.', loc:'Cileunyi', quote:'Servis speaker iPhone beres, suaranya balik normal. Sangat puas.'}
+];
+const testiPalette = [
+  'linear-gradient(135deg,#6c3cf7,#a855f7)',
+  'linear-gradient(135deg,#ff6b35,#f59e0b)',
+  'linear-gradient(135deg,#06d6a0,#00c6ff)',
+  'linear-gradient(135deg,#0ea5e9,#2563eb)',
+  'linear-gradient(135deg,#ec4899,#f97316)'
+];
+function initTestimonialSlider() {
+  const track = document.getElementById('testiTrack');
+  if (!track) return;
+  const items = Array.from({length: 50}, (_, i) => {
+    const t = testiSeeds[i % testiSeeds.length];
+    return {
+      name: `${t.name.split(' ')[0]} ${String(i + 1).padStart(2, '0')}`,
+      loc: t.loc,
+      quote: t.quote,
+      bg: testiPalette[i % testiPalette.length]
+    };
+  });
+  const cardHtml = (t) => `<div class="testi-card">
+    <div class="testi-rating"><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span><span class="testi-star">★</span></div>
+    <div class="testi-quote">"${t.quote}"</div>
+    <div class="testi-footer">
+      <div class="testi-ava" style="background:${t.bg}">${t.name[0]}</div>
+      <div><div class="testi-name">${t.name}</div><div class="testi-loc">📍 ${t.loc}</div></div>
+    </div>
+  </div>`;
+  track.innerHTML = items.map(cardHtml).join('') + items.map(cardHtml).join('');
+}
+
+/* ===== OPENING PROMO ===== */
+function openPromo() {
+  const p = document.getElementById('promoOverlay');
+  if (!p) return;
+  p.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closePromo() {
+  const p = document.getElementById('promoOverlay');
+  if (!p) return;
+  p.classList.remove('open');
+  document.body.style.overflow = '';
+  localStorage.setItem('promoShownV1', '1');
+}
+(function initTheme() {
+  const saved = localStorage.getItem('themeMode');
+  if (saved === 'dark' || saved === 'light') {
+    applyTheme(saved);
+    return;
+  }
+  applyTheme('dark');
+})();
+initTestimonialSlider();
+(function initPromoPopup() {
+  const shown = localStorage.getItem('promoShownV1');
+  if (shown) return;
+  setTimeout(openPromo, 900);
+})();
+</script>
 </body>
 </html>
-
